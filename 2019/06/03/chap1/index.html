@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Category: pytorch | 曹雷的博客</title>
+  <title>Numpy第一讲：初识Numpy | 曹雷的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="网页描述">
-<meta name="keywords" content="深度学习">
-<meta property="og:type" content="website">
-<meta property="og:title" content="曹雷的博客">
-<meta property="og:url" content="http://yoursite.com/categories/pytorch/index.html">
+  <meta name="description" content="初始NumpyNumpy是一个python库，用作数据操作和科学计算。">
+<meta name="keywords" content="numpy,python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Numpy第一讲：初识Numpy">
+<meta property="og:url" content="http://yoursite.com/2019/06/03/chap1/index.html">
 <meta property="og:site_name" content="曹雷的博客">
-<meta property="og:description" content="网页描述">
+<meta property="og:description" content="初始NumpyNumpy是一个python库，用作数据操作和科学计算。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-03T14:01:41.586Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="曹雷的博客">
-<meta name="twitter:description" content="网页描述">
+<meta name="twitter:title" content="Numpy第一讲：初识Numpy">
+<meta name="twitter:description" content="初始NumpyNumpy是一个python库，用作数据操作和科学计算。">
   
     <link rel="alternative" href="/atom.xml" title="曹雷的博客" type="application/atom+xml">
   
@@ -167,75 +168,281 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-chap1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/03/迁移学习/" class="archive-article-date">
-  	<time datetime="2019-06-03T03:26:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/03/迁移学习/">迁移学习</a>
+    <h1 class="article-title" itemprop="name">
+      Numpy第一讲：初识Numpy
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/06/03/chap1/" class="archive-article-date">
+  	<time datetime="2019-06-03T13:51:36.932Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="u521D_u59CBNumpy"><a href="#u521D_u59CBNumpy" class="headerlink" title="初始Numpy"></a>初始Numpy</h1><p>Numpy是一个python库，用作数据操作和科学计算。</p>
+<a id="more"></a>
+<h2 id="u4EC0_u4E48_u662FNumpy_3F"><a href="#u4EC0_u4E48_u662FNumpy_3F" class="headerlink" title="什么是Numpy?"></a>什么是Numpy?</h2><p>它是一个python库，主要用于对多维数组执行操作。广泛用于一下任务：</p>
+<ul>
+<li><strong>机器学习模型</strong>：Numpy数组可以用于存储训练数据和机器学习模型的参数。</li>
+<li><strong>图像处理和计算机图形学</strong>：图像可以表示为多维数组，Numpy提供了一些函数可以用来处理图像，比如：镜像图像，旋转图像等。</li>
+<li><strong>数学任务</strong>：积分，微分等操作。</li>
+</ul>
+<h2 id="Numpy_u6570_u7EC4"><a href="#Numpy_u6570_u7EC4" class="headerlink" title="Numpy数组"></a>Numpy数组</h2><h3 id="u4E00_u7EF4_u6570_u7EC4"><a href="#u4E00_u7EF4_u6570_u7EC4" class="headerlink" title="一维数组"></a>一维数组</h3><p>Numpy数组是python数组的扩展，Numpy数组配备了大量的函数和运算符，用于编写代码进行高性能的计算，下面快速定义一维的numpy数组：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">my_array = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</span><br><span class="line">print(my_array)</span><br></pre></td></tr></table></figure>
+<pre><code>[1 2 3 4 5]
+</code></pre><p>查看数组的形状：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(my_array.shape)  <span class="comment"># (5,)，意思是my_array是一个包含5个元素的数组</span></span><br></pre></td></tr></table></figure>
+<pre><code>(5,)
+</code></pre><p>对数组进行索引：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(my_array[<span class="number">0</span>])</span><br><span class="line">print(my_array[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>1
+2
+</code></pre><p>修改numpy数组的元素：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my_array[<span class="number">0</span>] = <span class="number">-1</span></span><br><span class="line">print(my_array)</span><br></pre></td></tr></table></figure>
+<pre><code>[-1  2  3  4  5]
+</code></pre><p>创建0元素数组或者1元素数组：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">zero_array = np.zeros((<span class="number">5</span>))  <span class="comment"># 注意这里的形状参数是一个元组</span></span><br><span class="line">print(zero_array)</span><br><span class="line"></span><br><span class="line">one_array = np.ones((<span class="number">5</span>))</span><br><span class="line">print(one_array)</span><br></pre></td></tr></table></figure>
+<pre><code>[0. 0. 0. 0. 0.]
+[1. 1. 1. 1. 1.]
+</code></pre><p>创建随机值数组：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rand_array = np.random.random((<span class="number">5</span>))  <span class="comment"># 同样这里的形状参数仍然是一个数组</span></span><br><span class="line">print(rand_array)</span><br></pre></td></tr></table></figure>
+<pre><code>[0.53845639 0.36419227 0.17339428 0.62292901 0.19174649]
+</code></pre><h3 id="u4E8C_u7EF4_u6570_u7EC4"><a href="#u4E8C_u7EF4_u6570_u7EC4" class="headerlink" title="二维数组"></a>二维数组</h3><p>上面都是一些一维数组，下面是numpy创建二维数组</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my_2darray = np.zeros((<span class="number">2</span>, <span class="number">3</span>))  <span class="comment"># 创建一个2行3列的0元素构成的数组</span></span><br><span class="line">print(my_2darray)</span><br></pre></td></tr></table></figure>
+<pre><code>[[0. 0. 0.]
+ [0. 0. 0.]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my_2darray_1 = np.ones((<span class="number">2</span>, <span class="number">3</span>))  <span class="comment"># 创建一个2行3列的1元素构成的数组</span></span><br><span class="line">print(my_2darray_1)</span><br></pre></td></tr></table></figure>
+<pre><code>[[1. 1. 1.]
+ [1. 1. 1.]]
+</code></pre><p>多维数组的索引，可以使用array[i][j]的形式进行索引，其中i表示行，j表示列，都是从0开始</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my_array = np.array([[<span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>]])</span><br><span class="line">print(my_array[<span class="number">0</span>][<span class="number">1</span>])  <span class="comment"># 打印数组的第1行第2列的元素值</span></span><br></pre></td></tr></table></figure>
+<pre><code>3
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(my_array[:, <span class="number">1</span>])  <span class="comment"># 提取第2列</span></span><br></pre></td></tr></table></figure>
+<pre><code>[3 5]
+</code></pre><h2 id="Numpy_u6570_u7EC4_u7684_u64CD_u4F5C"><a href="#Numpy_u6570_u7EC4_u7684_u64CD_u4F5C" class="headerlink" title="Numpy数组的操作"></a>Numpy数组的操作</h2><p>在数组上执行数学运算，加减乘除运算。下面是一个例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([[<span class="number">1.</span>, <span class="number">2.</span>], [<span class="number">3.</span>, <span class="number">4.</span>]])</span><br><span class="line">b = np.array([[<span class="number">5.</span>, <span class="number">6.</span>], [<span class="number">7.</span>, <span class="number">8.</span>]])</span><br><span class="line">Sum = a + b  <span class="comment"># 逐元素加法</span></span><br><span class="line">Diff = a - b  <span class="comment"># 逐元素减法</span></span><br><span class="line">Prod = a * b  <span class="comment"># 逐元素乘法</span></span><br><span class="line">Div = a / b  <span class="comment"># 逐元素除法</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">"Sum=\n"</span>, Sum)</span><br><span class="line">print(<span class="string">"Diff=\n"</span>, Diff)</span><br><span class="line">print(<span class="string">"Prod=\n"</span>, Prod)</span><br><span class="line">print(<span class="string">"Div=\n"</span>, Div)</span><br></pre></td></tr></table></figure>
+<pre><code>Sum=
+ [[ 6.  8.]
+ [10. 12.]]
+Diff=
+ [[-4. -4.]
+ [-4. -4.]]
+Prod=
+ [[ 5. 12.]
+ [21. 32.]]
+Div=
+ [[0.2        0.33333333]
+ [0.42857143 0.5       ]]
+</code></pre><p>执行乘法的时候，上面的做法是逐元素乘法，要使用矩阵乘法，需要使用<code>.dot</code>方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">matrix_prod = a.dot(b)</span><br><span class="line">print(<span class="string">"matrix_prod=\n"</span>, matrix_prod)</span><br></pre></td></tr></table></figure>
+<pre><code>matrix_prod=
+ [[19. 22.]
+ [43. 50.]]
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">pytorch</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">numpy</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/pytorch//" class="article-tag-list-link color3">pytorch</a>
+        			<a href="/categories/Numpy//" class="article-tag-list-link color1">Numpy</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/03/chap1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/06/03/迁移学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">迁移学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u521D_u59CBNumpy"><span class="toc-number">1.</span> <span class="toc-text">初始Numpy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u4EC0_u4E48_u662FNumpy_3F"><span class="toc-number">1.1.</span> <span class="toc-text">什么是Numpy?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Numpy_u6570_u7EC4"><span class="toc-number">1.2.</span> <span class="toc-text">Numpy数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u4E00_u7EF4_u6570_u7EC4"><span class="toc-number">1.2.1.</span> <span class="toc-text">一维数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u4E8C_u7EF4_u6570_u7EC4"><span class="toc-number">1.2.2.</span> <span class="toc-text">二维数组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Numpy_u6570_u7EC4_u7684_u64CD_u4F5C"><span class="toc-number">1.3.</span> <span class="toc-text">Numpy数组的操作</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "qFcxhiJ5RFPqGPYrVIciTIFv-gzGzoHsz",
+            app_key: "0XDRMoXHEHHDdWFMPNYqAHS2",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
+</script>
+    </section>
+  
   
 
-    
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -264,10 +471,10 @@ ga('send', 'pageview');
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
