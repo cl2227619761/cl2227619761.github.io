@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="曹雷的博客">
 <meta property="og:description" content="Numpy简单入门教程Numpy是Python中运算速度很快的一个数学库，允许在python中进行向量和矩阵运算。许多底层函数使用C进行编写，所以速度很快。 想要学习机器学习或者数据科学等，必须要掌握的就是Numpy">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/06/10/chap2/output_24_0.png">
-<meta property="og:updated_time" content="2019-06-10T14:17:26.796Z">
+<meta property="og:image" content="http://yoursite.com/uploads/output_24_0.png">
+<meta property="og:updated_time" content="2019-06-10T14:23:55.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Numpy第二讲：初始数组">
 <meta name="twitter:description" content="Numpy简单入门教程Numpy是Python中运算速度很快的一个数学库，允许在python中进行向量和矩阵运算。许多底层函数使用C进行编写，所以速度很快。 想要学习机器学习或者数据科学等，必须要掌握的就是Numpy">
-<meta name="twitter:image" content="http://yoursite.com/2019/06/10/chap2/output_24_0.png">
+<meta name="twitter:image" content="http://yoursite.com/uploads/output_24_0.png">
   
     <link rel="alternative" href="/atom.xml" title="曹雷的博客" type="application/atom+xml">
   
@@ -306,7 +306,7 @@ int32
 [10 50 90]
 </code></pre><h3 id="u5E03_u5C14_u5C4F_u853D"><a href="#u5E03_u5C14_u5C4F_u853D" class="headerlink" title="布尔屏蔽"></a>布尔屏蔽</h3><p><code>布尔屏蔽</code>允许根据特定的条件选取指定的元素</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">a = np.linspace(<span class="number">0</span>, <span class="number">2</span> * np.pi, <span class="number">50</span>)</span><br><span class="line">b = np.sin(a)</span><br><span class="line">plt.plot(a, b)</span><br><span class="line"></span><br><span class="line">mask = b &gt;= <span class="number">0</span></span><br><span class="line">plt.plot(a[mask], b[mask], <span class="string">"bo"</span>)</span><br><span class="line">mask = (b &gt;= <span class="number">0</span>) &amp; (a &lt;= np.pi / <span class="number">2</span>)</span><br><span class="line">plt.plot(a[mask], b[mask], <span class="string">"go"</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p><img src="output_24_0.png" alt="png"></p>
+<p><img src="/uploads/output_24_0.png" alt="png"></p>
 <h3 id="where_u51FD_u6570"><a href="#where_u51FD_u6570" class="headerlink" title="where函数"></a>where函数</h3><p><code>where()</code>函数是另外一个根据条件返回数组中的值的有效方法，只要把条件传递给它，它就会返回一个使条件为真的元素的列表</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">0</span>, <span class="number">100</span>, <span class="number">10</span>)</span><br><span class="line"><span class="comment"># 返回大于50的元素的索引</span></span><br><span class="line">print(np.where(a &gt;= <span class="number">50</span>)[<span class="number">0</span>])  <span class="comment"># [0]表示取列表</span></span><br></pre></td></tr></table></figure>
 <pre><code>[5 6 7 8 9]
@@ -609,19 +609,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">IT</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">numpy</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">IT</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
