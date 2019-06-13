@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Category: Numpy | 曹雷的博客</title>
+  <title>Numpy第三讲（部分） | 曹雷的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="网页描述">
-<meta name="keywords" content="深度学习">
-<meta property="og:type" content="website">
-<meta property="og:title" content="曹雷的博客">
-<meta property="og:url" content="http://yoursite.com/categories/Numpy/index.html">
+  <meta name="description" content="Python, Numpy教程本节是关于Python和Numpy的一些基础知识的复习 Python基本数据类型Python的基本数据类型包括整数，浮点数，布尔值和字符串">
+<meta name="keywords" content="numpy,python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Numpy第三讲（部分）">
+<meta property="og:url" content="http://yoursite.com/2019/06/13/chap3/index.html">
 <meta property="og:site_name" content="曹雷的博客">
-<meta property="og:description" content="网页描述">
+<meta property="og:description" content="Python, Numpy教程本节是关于Python和Numpy的一些基础知识的复习 Python基本数据类型Python的基本数据类型包括整数，浮点数，布尔值和字符串">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-13T08:57:54.699Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="曹雷的博客">
-<meta name="twitter:description" content="网页描述">
+<meta name="twitter:title" content="Numpy第三讲（部分）">
+<meta name="twitter:description" content="Python, Numpy教程本节是关于Python和Numpy的一些基础知识的复习 Python基本数据类型Python的基本数据类型包括整数，浮点数，布尔值和字符串">
   
     <link rel="alternative" href="/atom.xml" title="曹雷的博客" type="application/atom+xml">
   
@@ -167,36 +168,244 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-chap3" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Numpy第三讲（部分）
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/13/chap3/" class="archive-article-date">
+
+        
+        <a href="/2019/06/13/chap3/" class="archive-article-date">
   	<time datetime="2019-06-13T08:55:45.300Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-13</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/13/chap3/">Numpy第三讲（部分）</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Python_2C_Numpy_u6559_u7A0B"><a href="#Python_2C_Numpy_u6559_u7A0B" class="headerlink" title="Python, Numpy教程"></a>Python, Numpy教程</h1><p>本节是关于Python和Numpy的一些基础知识的复习</p>
+<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><h3 id="u57FA_u672C_u6570_u636E_u7C7B_u578B"><a href="#u57FA_u672C_u6570_u636E_u7C7B_u578B" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><p>Python的基本数据类型包括<strong>整数，浮点数，布尔值和字符串</strong><br><a id="more"></a></p>
+<ul>
+<li>数值类型：包括整数和浮点数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">3</span></span><br><span class="line">print(type(x))</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;class &apos;int&apos;&gt;
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y = <span class="number">3.5</span></span><br><span class="line">print(type(y))</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;class &apos;float&apos;&gt;
+</code></pre><ul>
+<li>布尔类型：Python的布尔逻辑运算符，使用的是英文单词</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(type(<span class="literal">True</span>))</span><br><span class="line">print(type(<span class="literal">False</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;class &apos;bool&apos;&gt;
+&lt;class &apos;bool&apos;&gt;
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="literal">True</span> <span class="keyword">and</span> <span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>False
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="literal">True</span> <span class="keyword">or</span> <span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>True
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="keyword">not</span> <span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>True
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="literal">True</span> != <span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>True
+</code></pre><ul>
+<li>字符串类型：Python对字符串有很好的支持，一些字符串的操作如下</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hello = <span class="string">"hello"</span></span><br><span class="line">world = <span class="string">"world"</span></span><br><span class="line">print(hello)</span><br><span class="line">print(len(hello))</span><br></pre></td></tr></table></figure>
+<pre><code>hello
+5
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 字符串的拼接</span></span><br><span class="line">hw = hello + <span class="string">" "</span> + world</span><br><span class="line">print(hw)</span><br></pre></td></tr></table></figure>
+<pre><code>hello world
+</code></pre><h3 id="u5BB9_u5668"><a href="#u5BB9_u5668" class="headerlink" title="容器"></a>容器</h3><p>Python包含几种内置的容器类型，<strong>字典，列表，集合和元组</strong></p>
+<ul>
+<li>列表</li>
+</ul>
+<p>列表其实就是Python中的数组，它可以动态调整大小并容纳不同类型的元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xs = [<span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">print(xs, xs[<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>[3, 1, 2] 2
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xs.append(<span class="string">"bar"</span>)</span><br><span class="line">print(xs)</span><br></pre></td></tr></table></figure>
+<pre><code>[3, 1, 2, &apos;bar&apos;]
+</code></pre><p>在列表上可以进行<strong>切片</strong>和<strong>循环</strong>操作；循环可以遍历列表的元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">animals = [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"fish"</span>]</span><br><span class="line"><span class="keyword">for</span> animal <span class="keyword">in</span> animals:</span><br><span class="line">    print(animal)</span><br></pre></td></tr></table></figure>
+<pre><code>dog
+cat
+fish
+</code></pre><p>如果要访问循环体内<strong>每个元素的索引</strong>，可以使用<code>enumerate</code>函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">animals = [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"fish"</span>]</span><br><span class="line"><span class="keyword">for</span> idx, animal <span class="keyword">in</span> enumerate(animals):</span><br><span class="line">    print(<span class="string">"#%s: %s"</span> % (idx + <span class="number">1</span>, animal))</span><br></pre></td></tr></table></figure>
+<pre><code>#1: dog
+#2: cat
+#3: fish
+</code></pre><p><strong>列表推导式</strong>，简单来讲就是将循环用一行代码就完成，比如下面的例子，对列表中的每个元素都进行平方操作</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 常规做法</span></span><br><span class="line">nums = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">squares = []</span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">    squares.append(num ** <span class="number">2</span>)</span><br><span class="line">print(squares)</span><br></pre></td></tr></table></figure>
+<pre><code>[0, 1, 4, 9, 16]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列表推导式方法</span></span><br><span class="line">nums = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">squares = [x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> nums]</span><br><span class="line">print(squares)</span><br></pre></td></tr></table></figure>
+<pre><code>[0, 1, 4, 9, 16]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列表推导式还可以包含条件，比如选取其中的偶数并求平方</span></span><br><span class="line">nums = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">even_squares = [x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> nums <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>]</span><br><span class="line">print(even_squares)</span><br></pre></td></tr></table></figure>
+<pre><code>[0, 4, 16]
+</code></pre><ul>
+<li>字典：字典存储的是键值对</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个字典</span></span><br><span class="line">dic = &#123;<span class="string">"cat"</span>: <span class="string">"cute"</span>, <span class="string">"dog"</span>: <span class="string">"furry"</span>&#125;</span><br><span class="line"><span class="comment"># 根据键取其值</span></span><br><span class="line">print(dic[<span class="string">"cat"</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>cute
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 检查某个键是否在字典中</span></span><br><span class="line">print(<span class="string">"cat"</span> <span class="keyword">in</span> dic)</span><br></pre></td></tr></table></figure>
+<pre><code>True
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将新的键值对加入字典中</span></span><br><span class="line">dic[<span class="string">"fish"</span>] = <span class="string">"wet"</span></span><br><span class="line">print(dic)</span><br></pre></td></tr></table></figure>
+<pre><code>{&apos;cat&apos;: &apos;cute&apos;, &apos;dog&apos;: &apos;furry&apos;, &apos;fish&apos;: &apos;wet&apos;}
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(dic.get(<span class="string">"fish"</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>wet
+</code></pre><p>可以使用<strong>循环</strong>遍历字典中的键，然后根据键找到对应的值，如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dic = &#123;<span class="string">"person"</span>: <span class="number">2</span>, <span class="string">"cat"</span>: <span class="number">4</span>, <span class="string">"spyder"</span>: <span class="number">8</span>&#125;</span><br><span class="line"><span class="keyword">for</span> animal <span class="keyword">in</span> dic:</span><br><span class="line">    <span class="comment"># 遍历字典的键</span></span><br><span class="line">    legs = dic[animal]</span><br><span class="line">    print(<span class="string">"%s has %d legs"</span> % (animal, legs))</span><br></pre></td></tr></table></figure>
+<pre><code>person has 2 legs
+cat has 4 legs
+spyder has 8 legs
+</code></pre><p>如果要同时得到键以及其对应的值，可以使用<code>items()</code>方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用items()方法对上面的例子进行修改</span></span><br><span class="line"><span class="keyword">for</span> animal, leg <span class="keyword">in</span> dic.items():</span><br><span class="line">    print(<span class="string">"%s has %d legs"</span> % (animal, leg))</span><br></pre></td></tr></table></figure>
+<pre><code>person has 2 legs
+cat has 4 legs
+spyder has 8 legs
+</code></pre><p><strong>字典推导式</strong>，类似于列表推导式，可以很轻松的构建词典数据类型，如下：从列表中选取偶数进行平方，并把结果做成字典，键为偶数值，值为其平方</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">even_num_to_square = &#123;x: x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> nums <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>&#125;</span><br><span class="line">print(even_num_to_square)</span><br></pre></td></tr></table></figure>
+<pre><code>{0: 0, 2: 4, 4: 16}
+</code></pre><ul>
+<li>集合：集合是不同元素的无序组合</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 建立一个集合</span></span><br><span class="line">animals = &#123;<span class="string">"cat"</span>, <span class="string">"dog"</span>&#125;</span><br><span class="line">print(animals)</span><br></pre></td></tr></table></figure>
+<pre><code>{&apos;cat&apos;, &apos;dog&apos;}
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"cat"</span> <span class="keyword">in</span> animals)  <span class="comment"># 检查某个元素是否在集合中</span></span><br></pre></td></tr></table></figure>
+<pre><code>True
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"fish"</span> <span class="keyword">in</span> animals)</span><br></pre></td></tr></table></figure>
+<pre><code>False
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(len(animals))  <span class="comment"># 查看集合的元素个数</span></span><br></pre></td></tr></table></figure>
+<pre><code>2
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 向集合中添加元素</span></span><br><span class="line">animals.add(<span class="string">"fish"</span>)</span><br><span class="line">print(animals)</span><br></pre></td></tr></table></figure>
+<pre><code>{&apos;cat&apos;, &apos;fish&apos;, &apos;dog&apos;}
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 从集合中删减元素</span></span><br><span class="line">animals.remove(<span class="string">"cat"</span>)</span><br><span class="line">print(animals)</span><br></pre></td></tr></table></figure>
+<pre><code>{&apos;fish&apos;, &apos;dog&apos;}
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 遍历集合的方法和遍历列表的方法是一样的</span></span><br><span class="line">animals = &#123;<span class="string">"cat"</span>, <span class="string">"dog"</span>, <span class="string">"fish"</span>&#125;</span><br><span class="line"><span class="keyword">for</span> idx, animal <span class="keyword">in</span> enumerate(animals):</span><br><span class="line">    print(<span class="string">"#%d: %s"</span> % (idx + <span class="number">1</span>, animal))</span><br></pre></td></tr></table></figure>
+<pre><code>#1: cat
+#2: fish
+#3: dog
+</code></pre><p><strong>集合推导式</strong>，就像列表和字典一样，集合推导式也是一样的道理</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 0到30的数字构成一个列表，然后使用集合推导式对其中的元素进行开平方</span></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</span><br><span class="line"></span><br><span class="line">nums = range(<span class="number">30</span>)</span><br><span class="line">new_nums = &#123;int(sqrt(x)) <span class="keyword">for</span> x <span class="keyword">in</span> nums&#125;</span><br><span class="line">print(new_nums)</span><br></pre></td></tr></table></figure>
+<pre><code>{0, 1, 2, 3, 4, 5}
+</code></pre><ul>
+<li>元组：元组是不可变的有序值列表。它在很多方面类似于列表，但是和列表最重要的一个区别就是<strong>元组可以被当作字典的键和集合的元素</strong>，而列表则不可以</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 建立一个由元组作为键的字典</span></span><br><span class="line">dic = &#123;(x, x + <span class="number">1</span>): x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)&#125;</span><br><span class="line">print(dic)</span><br></pre></td></tr></table></figure>
+<pre><code>{(0, 1): 0, (1, 2): 1, (2, 3): 2, (3, 4): 3, (4, 5): 4, (5, 6): 5, (6, 7): 6, (7, 8): 7, (8, 9): 8, (9, 10): 9}
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(dic[(<span class="number">1</span>, <span class="number">2</span>)])</span><br></pre></td></tr></table></figure>
+<pre><code>1
+</code></pre><h3 id="u51FD_u6570"><a href="#u51FD_u6570" class="headerlink" title="函数"></a>函数</h3><p>Python函数使用关键字<code>def</code>进行定义，比如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sign</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"positive"</span></span><br><span class="line">    <span class="keyword">elif</span> x &lt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"negative"</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"zero"</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>]:</span><br><span class="line">    print(sign(x))</span><br></pre></td></tr></table></figure>
+<pre><code>positive
+zero
+negative
+</code></pre><h3 id="u7C7B"><a href="#u7C7B" class="headerlink" title="类"></a>类</h3><p>Python中定义类的语法很简单，如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeter</span>:</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># constructor</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># instance method</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">greet</span><span class="params">(self, loud=False)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> loud:</span><br><span class="line">            print(<span class="string">"HELLO, %s!"</span> % self.name.upper())</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"hello, %s"</span> % self.name)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">g = Greeter(<span class="string">"Bob"</span>)</span><br><span class="line">g.greet()</span><br></pre></td></tr></table></figure>
+<pre><code>hello, Bob
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g.greet(loud=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>HELLO, BOB!
+</code></pre><h2 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h2><p>Numpy数组中的值的类型都相同，维数是数组的排名；数组的形状是一个整数元组，给出了每个维度的数组大小</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用嵌套的Python列表创建一个Numpy数组</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">print(type(a))</span><br><span class="line">print(a.shape)</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;class &apos;numpy.ndarray&apos;&gt;
+(3,)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">issubclass(type(a), np.ndarray)</span><br></pre></td></tr></table></figure>
+<pre><code>True
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(a[<span class="number">0</span>], a[<span class="number">1</span>], a[<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>1 2 3
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]])</span><br><span class="line">print(b.shape)</span><br></pre></td></tr></table></figure>
+<pre><code>(2, 3)
+</code></pre><p>Numpy中创建数组的常用函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = np.zeros((<span class="number">2</span>, <span class="number">2</span>))</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+<pre><code>[[0. 0.]
+ [0. 0.]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b = np.ones((<span class="number">2</span>, <span class="number">2</span>))</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+<pre><code>[[1. 1.]
+ [1. 1.]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c = np.full((<span class="number">2</span>, <span class="number">2</span>), <span class="number">8</span>)</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
+<pre><code>[[8 8]
+ [8 8]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d = np.eye(<span class="number">2</span>)</span><br><span class="line">print(d)</span><br></pre></td></tr></table></figure>
+<pre><code>[[1. 0.]
+ [0. 1.]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">e = np.random.random((<span class="number">2</span>, <span class="number">2</span>))</span><br><span class="line">print(e)</span><br></pre></td></tr></table></figure>
+<pre><code>[[0.02862432 0.90417669]
+ [0.56781181 0.56854238]]
+</code></pre><h3 id="u6570_u7EC4_u7D22_u5F15"><a href="#u6570_u7EC4_u7D22_u5F15" class="headerlink" title="数组索引"></a>数组索引</h3><p>Numpy提供了一种索引数组的方法</p>
+<ul>
+<li>切片：与Python列表的切片类似，可以对Numpy数组进行切片。由于数组可能是多维的，因此必须为数组的每一维指定一个切片</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a = np.arange(<span class="number">12</span>)</span><br><span class="line">a = a.reshape((<span class="number">3</span>, <span class="number">4</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 由于a是二维数组，所以需要在每个维度上都要指定一个切片</span></span><br><span class="line">print(a)</span><br><span class="line">print(<span class="string">"-"</span> * <span class="number">10</span>)</span><br><span class="line">print(a[:<span class="number">2</span>, <span class="number">1</span>:<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>[[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]]
+----------
+[[1 2]
+ [5 6]]
+</code></pre><ul>
+<li>整数数组索引：使用切片索引数组的时候，生成的数组仍然是原始数组的子数组。相反，整数数组索引允许使用另一个数组中的数据构造任意数组</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a = np.array([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>], [<span class="number">5</span>, <span class="number">6</span>]])</span><br><span class="line">print(a.shape)</span><br></pre></td></tr></table></figure>
+<pre><code>(3, 2)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 整数数组索引的方式，需要注意的是原数组有两个维度</span></span><br><span class="line">b = a[[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>], [<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>]]  <span class="comment"># 第一个维度分别取第0，1，2处的元素，第二个维度分别取第0，1，0处的元素</span></span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+<pre><code>[1 4 5]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(a[[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">0</span>, <span class="number">1</span>]])</span><br></pre></td></tr></table></figure>
+<pre><code>[3 6]
+</code></pre><ul>
+<li>布尔数组索引：通常这种类型的索引用来索引满足特定条件的元素</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a = np.array([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>], [<span class="number">5</span>, <span class="number">6</span>]])</span><br><span class="line"><span class="comment"># bool_idx，它是一个和原数组有着相同形状的数组，其中那些满足条件的元素的位置为True，其余位置为False</span></span><br><span class="line">bool_idx = (a &gt; <span class="number">2</span>)</span><br><span class="line">print(a)</span><br><span class="line">print(<span class="string">"-"</span> * <span class="number">10</span>)</span><br><span class="line">print(bool_idx)</span><br></pre></td></tr></table></figure>
+<pre><code>[[1 2]
+ [3 4]
+ [5 6]]
+----------
+[[False False]
+ [ True  True]
+ [ True  True]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(a[bool_idx])</span><br></pre></td></tr></table></figure>
+<pre><code>[3 4 5 6]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 整个过程可以用一句话完成</span></span><br><span class="line">print(a[a &gt; <span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>[3 4 5 6]
+</code></pre><h3 id="u6570_u636E_u7C7B_u578B"><a href="#u6570_u636E_u7C7B_u578B" class="headerlink" title="数据类型"></a>数据类型</h3><p>每个Numpy数组都是具有相同类型元素的网格，在构造数组的时候通常还包含一个可选参数来指定数据类型，这个可选参数一般为<code>dtype</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([<span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line">print(a.dtype)</span><br></pre></td></tr></table></figure>
+<pre><code>int32
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([<span class="number">1.</span>, <span class="number">2.</span>])</span><br><span class="line">print(a.dtype)</span><br></pre></td></tr></table></figure>
+<pre><code>float64
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([<span class="number">1</span>, <span class="number">2</span>], dtype=np.int64)</span><br><span class="line">print(a.dtype)</span><br></pre></td></tr></table></figure>
+<pre><code>int64
+</code></pre><h3 id="u6570_u7EC4_u4E2D_u7684_u6570_u5B66"><a href="#u6570_u7EC4_u4E2D_u7684_u6570_u5B66" class="headerlink" title="数组中的数学"></a>数组中的数学</h3>
+      
 
-        <div class="article-info info-on-right">
-          
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -212,7 +421,7 @@ ga('send', 'pageview');
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -225,123 +434,145 @@ ga('send', 'pageview');
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/13/chap3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/10/chap2/" class="archive-article-date">
-  	<time datetime="2019-06-10T14:13:18.290Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-10</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/06/10/chap2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Numpy第二讲：初始数组</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/10/chap2/">Numpy第二讲：初始数组</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">numpy</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Numpy//" class="article-tag-list-link color1">Numpy</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python_2C_Numpy_u6559_u7A0B"><span class="toc-number">1.</span> <span class="toc-text">Python, Numpy教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Python"><span class="toc-number">1.1.</span> <span class="toc-text">Python</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u57FA_u672C_u6570_u636E_u7C7B_u578B"><span class="toc-number">1.1.1.</span> <span class="toc-text">基本数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5BB9_u5668"><span class="toc-number">1.1.2.</span> <span class="toc-text">容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u51FD_u6570"><span class="toc-number">1.1.3.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u7C7B"><span class="toc-number">1.1.4.</span> <span class="toc-text">类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Numpy"><span class="toc-number">1.2.</span> <span class="toc-text">Numpy</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u6570_u7EC4_u7D22_u5F15"><span class="toc-number">1.2.1.</span> <span class="toc-text">数组索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u6570_u636E_u7C7B_u578B"><span class="toc-number">1.2.2.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u6570_u7EC4_u4E2D_u7684_u6570_u5B66"><span class="toc-number">1.2.3.</span> <span class="toc-text">数组中的数学</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/03/chap1/" class="archive-article-date">
-  	<time datetime="2019-06-03T13:51:36.932Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/03/chap1/">Numpy第一讲：初识Numpy</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">numpy</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Numpy//" class="article-tag-list-link color1">Numpy</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "qFcxhiJ5RFPqGPYrVIciTIFv-gzGzoHsz",
+            app_key: "0XDRMoXHEHHDdWFMPNYqAHS2",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
+</script>
+    </section>
   
-    </div></section>
   
 
-    
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -370,10 +601,10 @@ ga('send', 'pageview');
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
