@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Category: Markdown语法相关 | 曹雷的博客</title>
+  <title>Openslide随笔 | 曹雷的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="网页描述">
-<meta name="keywords" content="深度学习">
-<meta property="og:type" content="website">
-<meta property="og:title" content="曹雷的博客">
-<meta property="og:url" content="http://yoursite.com/categories/Markdown语法相关/index.html">
+  <meta name="description" content="Openslide第一讲病理图片读取病理图像的格式常见的有tiff格式和svs格式，本例以tiff为例。">
+<meta name="keywords" content="openslide,WSI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Openslide随笔">
+<meta property="og:url" content="http://yoursite.com/2019/06/25/openslide学习/index.html">
 <meta property="og:site_name" content="曹雷的博客">
-<meta property="og:description" content="网页描述">
+<meta property="og:description" content="Openslide第一讲病理图片读取病理图像的格式常见的有tiff格式和svs格式，本例以tiff为例。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/uploads/wsi.png">
+<meta property="og:image" content="http://yoursite.com/uploads/output_13_0.png">
+<meta property="og:updated_time" content="2019-06-25T08:19:10.734Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="曹雷的博客">
-<meta name="twitter:description" content="网页描述">
+<meta name="twitter:title" content="Openslide随笔">
+<meta name="twitter:description" content="Openslide第一讲病理图片读取病理图像的格式常见的有tiff格式和svs格式，本例以tiff为例。">
+<meta name="twitter:image" content="http://yoursite.com/uploads/wsi.png">
   
     <link rel="alternative" href="/atom.xml" title="曹雷的博客" type="application/atom+xml">
   
@@ -167,75 +171,259 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-openslide学习" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/02/测试/" class="archive-article-date">
-  	<time datetime="2019-06-02T09:35:13.251Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/02/测试/">Markdown的初次见面</a>
+    <h1 class="article-title" itemprop="name">
+      Openslide随笔
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/06/25/openslide学习/" class="archive-article-date">
+  	<time datetime="2019-06-25T08:11:54.152Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Openslide_u7B2C_u4E00_u8BB2"><a href="#Openslide_u7B2C_u4E00_u8BB2" class="headerlink" title="Openslide第一讲"></a>Openslide第一讲</h1><h2 id="u75C5_u7406_u56FE_u7247_u8BFB_u53D6"><a href="#u75C5_u7406_u56FE_u7247_u8BFB_u53D6" class="headerlink" title="病理图片读取"></a>病理图片读取</h2><p>病理图像的格式常见的有tiff格式和svs格式，本例以tiff为例。</p>
+<p><img src="/uploads/wsi.png" alt="wsi"></p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 导入相关的库</span><br><span class="line">import openslide</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source = openslide.open_slide(&quot;../tumor_001.tif&quot;)  # 读取tif原始图片，生成一个slide实例</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(source)</span><br></pre></td></tr></table></figure>
+<pre><code>OpenSlide(&apos;../tumor_001.tif&apos;)
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">levels = source.level_count  # 该WSI图像有多少个level，就像上图中所示</span><br><span class="line">print(levels)</span><br></pre></td></tr></table></figure>
+<pre><code>10
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">level_dims = source.level_dimensions  # 原始图像经过各个level缩放后的尺寸(w, h)</span><br><span class="line">print(level_dims)</span><br></pre></td></tr></table></figure>
+<pre><code>((97792, 221184), (48896, 110592), (24448, 55296), (12224, 27648), (6112, 13824), (3056, 6912), (1528, 3456), (764, 1728), (382, 864), (191, 432))
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(level_dims[0])  # 经过第1个level缩放后的尺寸，也就是原始图像的大小</span><br></pre></td></tr></table></figure>
+<pre><code>(97792, 221184)
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">downsamples = source.level_downsamples  # 这是每个level的缩小倍数，与level_dimensions是一一对应的</span><br><span class="line">print(downsamples)</span><br></pre></td></tr></table></figure>
+<pre><code>(1.0, 2.0, 4.0, 8.0, 16.0, 32.0, 64.0, 128.0, 256.0, 512.0)
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 将缩放后的尺寸和对应的缩放倍数相乘，就可以得到原始图像的大小，比如</span><br><span class="line">origin_size = np.array(level_dims[-1]) * downsamples[-1]</span><br><span class="line">print(&quot;原始图像大小:&quot;, origin_size)</span><br></pre></td></tr></table></figure>
+<pre><code>原始图像大小: [ 97792. 221184.]
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 查看level8水平的图像</span><br><span class="line">level_8_size = source.level_dimensions[8]</span><br><span class="line">img = source.read_region((0, 0), 8, level_8_size)  # 第一个参数是level0下的图像左上角的坐标值，第二个参数是要得到的是第几个Level下的图像，第三个参数是该level下的尺寸</span><br><span class="line">print(img)</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;PIL.Image.Image image mode=RGBA size=382x864 at 0x296701AEEF0&gt;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?source.read_region</span><br></pre></td></tr></table></figure>
+<pre><code>[1;31mSignature:[0m [0msource[0m[1;33m.[0m[0mread_region[0m[1;33m([0m[0mlocation[0m[1;33m,[0m [0mlevel[0m[1;33m,[0m [0msize[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[1;31mDocstring:[0m
+Return a PIL.Image containing the contents of the region.
+
+location: (x, y) tuple giving the top left pixel in the level 0
+          reference frame.
+level:    the level number.
+size:     (width, height) tuple giving the region size.
+
+Unlike in the C interface, the image data returned by this
+function is not premultiplied.
+[1;31mFile:[0m      e:\app\python\lib\site-packages\openslide\__init__.py
+[1;31mType:[0m      method
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">img = np.array(img)</span><br><span class="line">print(img.shape)</span><br></pre></td></tr></table></figure>
+<pre><code>(864, 382, 4)
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.imshow(img)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="/uploads/output_13_0.png" alt="png"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Markdown</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">openslide</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">文档</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">WSI</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Markdown语法相关//" class="article-tag-list-link color3">Markdown语法相关</a>
+        			<a href="/categories/Openslide库学习//" class="article-tag-list-link color3">Openslide库学习</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/25/openslide学习/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/06/17/wsi图像的预处理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">深度医学病理图片学习第一弹</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Openslide_u7B2C_u4E00_u8BB2"><span class="toc-number">1.</span> <span class="toc-text">Openslide第一讲</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u75C5_u7406_u56FE_u7247_u8BFB_u53D6"><span class="toc-number">1.1.</span> <span class="toc-text">病理图片读取</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "qFcxhiJ5RFPqGPYrVIciTIFv-gzGzoHsz",
+            app_key: "0XDRMoXHEHHDdWFMPNYqAHS2",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
+</script>
+    </section>
+  
   
 
-    
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -264,10 +452,10 @@ ga('send', 'pageview');
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
