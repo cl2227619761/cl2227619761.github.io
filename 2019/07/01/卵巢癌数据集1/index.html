@@ -6,34 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>迁移学习 | 曹雷的博客</title>
+  <title>卵巢癌数据集1 | 曹雷的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Transfer Learning Tutorial Author: Sasank Chilamkurthy  In this tutorial, you will learn how to train your network usingtransfer learning. You can read more about the transfer learning at cs231nnotes">
-<meta name="keywords" content="pytorch,深度学习">
+  <meta name="description" content="Ovarian Carcinomas Histopathology Dataset 该卵巢癌数据集是属于加拿大西门菲莎大学，数据为Whole slide image，源于5种亚型的卵巢癌活检切片，这五种病理类型为：高级别浆液性癌(HGSC)，低级别浆液性癌(LGSC)，子宫内膜样癌(EN)(10%)，透明细胞癌(CC)(10%)和黏液性癌(MC)(3%)2018卵巢癌诊疗。该数据集目前来自于80个">
+<meta name="keywords" content="ovarian cancer,dataset">
 <meta property="og:type" content="article">
-<meta property="og:title" content="迁移学习">
-<meta property="og:url" content="http://yoursite.com/2019/06/03/迁移学习/index.html">
+<meta property="og:title" content="卵巢癌数据集1">
+<meta property="og:url" content="http://yoursite.com/2019/07/01/卵巢癌数据集1/index.html">
 <meta property="og:site_name" content="曹雷的博客">
-<meta property="og:description" content="Transfer Learning Tutorial Author: Sasank Chilamkurthy  In this tutorial, you will learn how to train your network usingtransfer learning. You can read more about the transfer learning at cs231nnotes">
+<meta property="og:description" content="Ovarian Carcinomas Histopathology Dataset 该卵巢癌数据集是属于加拿大西门菲莎大学，数据为Whole slide image，源于5种亚型的卵巢癌活检切片，这五种病理类型为：高级别浆液性癌(HGSC)，低级别浆液性癌(LGSC)，子宫内膜样癌(EN)(10%)，透明细胞癌(CC)(10%)和黏液性癌(MC)(3%)2018卵巢癌诊疗。该数据集目前来自于80个">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/uploads/output_6_0.png">
-<meta property="og:image" content="http://yoursite.com/uploads/output_15_0.png">
-<meta property="og:image" content="http://yoursite.com/uploads/output_15_1.png">
-<meta property="og:image" content="http://yoursite.com/uploads/output_15_2.png">
-<meta property="og:image" content="http://yoursite.com/uploads/output_15_3.png">
-<meta property="og:image" content="http://yoursite.com/uploads/output_15_4.png">
-<meta property="og:image" content="http://yoursite.com/uploads/output_15_5.png">
-<meta property="og:image" content="http://yoursite.com/uploads/output_20_0.png">
-<meta property="og:image" content="http://yoursite.com/uploads/output_20_1.png">
-<meta property="og:image" content="http://yoursite.com/uploads/output_20_2.png">
-<meta property="og:image" content="http://yoursite.com/uploads/output_20_3.png">
-<meta property="og:image" content="http://yoursite.com/uploads/output_20_4.png">
-<meta property="og:image" content="http://yoursite.com/uploads/output_20_5.png">
-<meta property="og:updated_time" content="2019-06-03T04:22:53.815Z">
+<meta property="og:image" content="http://yoursite.com/uploads/sfu1.jpg">
+<meta property="og:image" content="http://yoursite.com/uploads/types_context.jpg">
+<meta property="og:updated_time" content="2019-07-01T03:21:53.436Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="迁移学习">
-<meta name="twitter:description" content="Transfer Learning Tutorial Author: Sasank Chilamkurthy  In this tutorial, you will learn how to train your network usingtransfer learning. You can read more about the transfer learning at cs231nnotes">
-<meta name="twitter:image" content="http://yoursite.com/uploads/output_6_0.png">
+<meta name="twitter:title" content="卵巢癌数据集1">
+<meta name="twitter:description" content="Ovarian Carcinomas Histopathology Dataset 该卵巢癌数据集是属于加拿大西门菲莎大学，数据为Whole slide image，源于5种亚型的卵巢癌活检切片，这五种病理类型为：高级别浆液性癌(HGSC)，低级别浆液性癌(LGSC)，子宫内膜样癌(EN)(10%)，透明细胞癌(CC)(10%)和黏液性癌(MC)(3%)2018卵巢癌诊疗。该数据集目前来自于80个">
+<meta name="twitter:image" content="http://yoursite.com/uploads/sfu1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="曹雷的博客" type="application/atom+xml">
   
@@ -182,427 +171,32 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-迁移学习" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-卵巢癌数据集1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      迁移学习
+      卵巢癌数据集1
     </h1>
   
 
         
-        <a href="/2019/06/03/迁移学习/" class="archive-article-date">
-  	<time datetime="2019-06-03T03:26:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-03</time>
+        <a href="/2019/07/01/卵巢癌数据集1/" class="archive-article-date">
+  	<time datetime="2019-07-01T03:17:32.322Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Transfer_Learning_Tutorial"><a href="#Transfer_Learning_Tutorial" class="headerlink" title="Transfer Learning Tutorial"></a>Transfer Learning Tutorial</h1><blockquote>
-<p>Author: <a href="https://chsasank.github.io" target="_blank" rel="noopener">Sasank Chilamkurthy</a></p>
-</blockquote>
-<p>In this tutorial, you will learn how to train your network using<br>transfer learning. You can read more about the transfer learning at <a href="https://cs231n.github.io/transfer-learning/" target="_blank" rel="noopener">cs231n<br>notes</a><br><a id="more"></a></p>
-<p>Quoting these notes,</p>
-<pre><code>In practice, very few people train an entire Convolutional Network
-from scratch (with random initialization), because it is relatively
-rare to have a dataset of sufficient size. Instead, it is common to
-pretrain a ConvNet on a very large dataset (e.g. ImageNet, which
-contains 1.2 million images with 1000 categories), and then use the
-ConvNet either as an initialization or a fixed feature extractor for
-the task of interest.
-</code></pre><p>These two major transfer learning scenarios look as follows:</p>
-<ul>
-<li><strong>Finetuning the convnet</strong>: Instead of random initializaion, we<br>initialize the network with a pretrained network, like the one that is<br>trained on imagenet 1000 dataset. Rest of the training looks as<br>usual.</li>
-<li><strong>ConvNet as fixed feature extractor</strong>: Here, we will freeze the weights<br>for all of the network except that of the final fully connected<br>layer. This last fully connected layer is replaced with a new one<br>with random weights and only this layer is trained.</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># License: BSD</span></span><br><span class="line"><span class="comment"># Author: Sasank Chilamkurthy</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function, division</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"><span class="keyword">import</span> torch.optim <span class="keyword">as</span> optim</span><br><span class="line"><span class="keyword">from</span> torch.optim <span class="keyword">import</span> lr_scheduler</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> torchvision</span><br><span class="line"><span class="keyword">from</span> torchvision <span class="keyword">import</span> datasets, models, transforms</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line">plt.ion()   <span class="comment"># interactive mode</span></span><br></pre></td></tr></table></figure>
-<h2 id="Load_Data"><a href="#Load_Data" class="headerlink" title="Load Data"></a>Load Data</h2><p>We will use torchvision and torch.utils.data packages for loading the<br>data.</p>
-<p>The problem we’re going to solve today is to train a model to classify<br><strong>ants</strong> and <strong>bees</strong>. We have about 120 training images each for ants and bees.<br>There are 75 validation images for each class. Usually, this is a very<br>small dataset to generalize upon, if trained from scratch. Since we<br>are using transfer learning, we should be able to generalize reasonably<br>well.</p>
-<p>This dataset is a very small subset of imagenet.</p>
-<p>.. Note ::<br>   Download the data from <a href="https://download.pytorch.org/tutorial/hymenoptera_data.zip" target="_blank" rel="noopener">here</a> and extract it to the current directory.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Data augmentation and normalization for training</span></span><br><span class="line"><span class="comment"># Just normalization for validation</span></span><br><span class="line">data_transforms = &#123;</span><br><span class="line">    <span class="string">'train'</span>: transforms.Compose([</span><br><span class="line">        transforms.RandomResizedCrop(<span class="number">224</span>),</span><br><span class="line">        transforms.RandomHorizontalFlip(),</span><br><span class="line">        transforms.ToTensor(),</span><br><span class="line">        transforms.Normalize([<span class="number">0.485</span>, <span class="number">0.456</span>, <span class="number">0.406</span>], [<span class="number">0.229</span>, <span class="number">0.224</span>, <span class="number">0.225</span>])</span><br><span class="line">    ]),</span><br><span class="line">    <span class="string">'val'</span>: transforms.Compose([</span><br><span class="line">        transforms.Resize(<span class="number">256</span>),</span><br><span class="line">        transforms.CenterCrop(<span class="number">224</span>),</span><br><span class="line">        transforms.ToTensor(),</span><br><span class="line">        transforms.Normalize([<span class="number">0.485</span>, <span class="number">0.456</span>, <span class="number">0.406</span>], [<span class="number">0.229</span>, <span class="number">0.224</span>, <span class="number">0.225</span>])</span><br><span class="line">    ]),</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">data_dir = <span class="string">'./hymenoptera_data'</span></span><br><span class="line">image_datasets = &#123;x: datasets.ImageFolder(os.path.join(data_dir, x),</span><br><span class="line">                                          data_transforms[x])</span><br><span class="line">                  <span class="keyword">for</span> x <span class="keyword">in</span> [<span class="string">'train'</span>, <span class="string">'val'</span>]&#125;</span><br><span class="line">dataloaders = &#123;x: torch.utils.data.DataLoader(image_datasets[x], batch_size=<span class="number">4</span>,</span><br><span class="line">                                             shuffle=<span class="literal">True</span>, num_workers=<span class="number">4</span>)</span><br><span class="line">              <span class="keyword">for</span> x <span class="keyword">in</span> [<span class="string">'train'</span>, <span class="string">'val'</span>]&#125;</span><br><span class="line">dataset_sizes = &#123;x: len(image_datasets[x]) <span class="keyword">for</span> x <span class="keyword">in</span> [<span class="string">'train'</span>, <span class="string">'val'</span>]&#125;</span><br><span class="line">class_names = image_datasets[<span class="string">'train'</span>].classes</span><br><span class="line"></span><br><span class="line">device = torch.device(<span class="string">"cuda:0"</span>)</span><br></pre></td></tr></table></figure>
-<p>Visualize a few images<br>^^^^^^^^^^^^^^^^^^^^^^<br>Let’s visualize a few training images so as to understand the data<br>augmentations.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">imshow</span><span class="params">(inp, title=None)</span>:</span></span><br><span class="line">    <span class="string">"""Imshow for Tensor."""</span></span><br><span class="line">    inp = inp.numpy().transpose((<span class="number">1</span>, <span class="number">2</span>, <span class="number">0</span>))</span><br><span class="line">    mean = np.array([<span class="number">0.485</span>, <span class="number">0.456</span>, <span class="number">0.406</span>])</span><br><span class="line">    std = np.array([<span class="number">0.229</span>, <span class="number">0.224</span>, <span class="number">0.225</span>])</span><br><span class="line">    inp = std * inp + mean</span><br><span class="line">    inp = np.clip(inp, <span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">    plt.imshow(inp)</span><br><span class="line">    <span class="keyword">if</span> title <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        plt.title(title)</span><br><span class="line">    plt.pause(<span class="number">0.001</span>)  <span class="comment"># pause a bit so that plots are updated</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Get a batch of training data</span></span><br><span class="line">inputs, classes = next(iter(dataloaders[<span class="string">'train'</span>]))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Make a grid from batch</span></span><br><span class="line">out = torchvision.utils.make_grid(inputs)</span><br><span class="line"></span><br><span class="line">imshow(out, title=[class_names[x] <span class="keyword">for</span> x <span class="keyword">in</span> classes])</span><br></pre></td></tr></table></figure>
-<p><img src="/uploads/output_6_0.png" alt="png"></p>
-<h2 id="Training_the_model"><a href="#Training_the_model" class="headerlink" title="Training the model"></a>Training the model</h2><p>Now, let’s write a general function to train a model. Here, we will<br>illustrate:</p>
-<ul>
-<li>Scheduling the learning rate</li>
-<li>Saving the best model</li>
-</ul>
-<p>In the following, parameter <code>scheduler</code> is an LR scheduler object from<br><code>torch.optim.lr_scheduler</code>.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">train_model</span><span class="params">(model, criterion, optimizer, scheduler, num_epochs=<span class="number">25</span>)</span>:</span></span><br><span class="line">    since = time.time()</span><br><span class="line"></span><br><span class="line">    best_model_wts = copy.deepcopy(model.state_dict())</span><br><span class="line">    best_acc = <span class="number">0.0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> epoch <span class="keyword">in</span> range(num_epochs):</span><br><span class="line">        print(<span class="string">'Epoch &#123;&#125;/&#123;&#125;'</span>.format(epoch, num_epochs - <span class="number">1</span>))</span><br><span class="line">        print(<span class="string">'-'</span> * <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Each epoch has a training and validation phase</span></span><br><span class="line">        <span class="keyword">for</span> phase <span class="keyword">in</span> [<span class="string">'train'</span>, <span class="string">'val'</span>]:</span><br><span class="line">            <span class="keyword">if</span> phase == <span class="string">'train'</span>:</span><br><span class="line">                scheduler.step()</span><br><span class="line">                model.train()  <span class="comment"># Set model to training mode</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                model.eval()   <span class="comment"># Set model to evaluate mode</span></span><br><span class="line"></span><br><span class="line">            running_loss = <span class="number">0.0</span></span><br><span class="line">            running_corrects = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">            <span class="comment"># Iterate over data.</span></span><br><span class="line">            <span class="keyword">for</span> inputs, labels <span class="keyword">in</span> dataloaders[phase]:</span><br><span class="line">                inputs = inputs.to(device)</span><br><span class="line">                labels = labels.to(device)</span><br><span class="line"></span><br><span class="line">                <span class="comment"># zero the parameter gradients</span></span><br><span class="line">                optimizer.zero_grad()</span><br><span class="line"></span><br><span class="line">                <span class="comment"># forward</span></span><br><span class="line">                <span class="comment"># track history if only in train</span></span><br><span class="line">                <span class="keyword">with</span> torch.set_grad_enabled(phase == <span class="string">'train'</span>):</span><br><span class="line">                    outputs = model(inputs)</span><br><span class="line">                    _, preds = torch.max(outputs, <span class="number">1</span>)</span><br><span class="line">                    loss = criterion(outputs, labels)</span><br><span class="line"></span><br><span class="line">                    <span class="comment"># backward + optimize only if in training phase</span></span><br><span class="line">                    <span class="keyword">if</span> phase == <span class="string">'train'</span>:</span><br><span class="line">                        loss.backward()</span><br><span class="line">                        optimizer.step()</span><br><span class="line"></span><br><span class="line">                <span class="comment"># statistics</span></span><br><span class="line">                running_loss += loss.item() * inputs.size(<span class="number">0</span>)</span><br><span class="line">                running_corrects += torch.sum(preds == labels.data)</span><br><span class="line"></span><br><span class="line">            epoch_loss = running_loss / dataset_sizes[phase]</span><br><span class="line">            epoch_acc = running_corrects.double() / dataset_sizes[phase]</span><br><span class="line"></span><br><span class="line">            print(<span class="string">'&#123;&#125; Loss: &#123;:.4f&#125; Acc: &#123;:.4f&#125;'</span>.format(</span><br><span class="line">                phase, epoch_loss, epoch_acc))</span><br><span class="line"></span><br><span class="line">            <span class="comment"># deep copy the model</span></span><br><span class="line">            <span class="keyword">if</span> phase == <span class="string">'val'</span> <span class="keyword">and</span> epoch_acc &gt; best_acc:</span><br><span class="line">                best_acc = epoch_acc</span><br><span class="line">                best_model_wts = copy.deepcopy(model.state_dict())</span><br><span class="line"></span><br><span class="line">        print()</span><br><span class="line"></span><br><span class="line">    time_elapsed = time.time() - since</span><br><span class="line">    print(<span class="string">'Training complete in &#123;:.0f&#125;m &#123;:.0f&#125;s'</span>.format(</span><br><span class="line">        time_elapsed // <span class="number">60</span>, time_elapsed % <span class="number">60</span>))</span><br><span class="line">    print(<span class="string">'Best val Acc: &#123;:4f&#125;'</span>.format(best_acc))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># load best model weights</span></span><br><span class="line">    model.load_state_dict(best_model_wts)</span><br><span class="line">    <span class="keyword">return</span> model</span><br></pre></td></tr></table></figure>
-<p>Visualizing the model predictions<br>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</p>
-<p>Generic function to display predictions for a few images</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">visualize_model</span><span class="params">(model, num_images=<span class="number">6</span>)</span>:</span></span><br><span class="line">    was_training = model.training</span><br><span class="line">    model.eval()</span><br><span class="line">    images_so_far = <span class="number">0</span></span><br><span class="line">    fig = plt.figure()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">with</span> torch.no_grad():</span><br><span class="line">        <span class="keyword">for</span> i, (inputs, labels) <span class="keyword">in</span> enumerate(dataloaders[<span class="string">'val'</span>]):</span><br><span class="line">            inputs = inputs.to(device)</span><br><span class="line">            labels = labels.to(device)</span><br><span class="line"></span><br><span class="line">            outputs = model(inputs)</span><br><span class="line">            _, preds = torch.max(outputs, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(inputs.size()[<span class="number">0</span>]):</span><br><span class="line">                images_so_far += <span class="number">1</span></span><br><span class="line">                ax = plt.subplot(num_images//<span class="number">2</span>, <span class="number">2</span>, images_so_far)</span><br><span class="line">                ax.axis(<span class="string">'off'</span>)</span><br><span class="line">                ax.set_title(<span class="string">'predicted: &#123;&#125;'</span>.format(class_names[preds[j]]))</span><br><span class="line">                imshow(inputs.cpu().data[j])</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> images_so_far == num_images:</span><br><span class="line">                    model.train(mode=was_training)</span><br><span class="line">                    <span class="keyword">return</span></span><br><span class="line">        model.train(mode=was_training)</span><br></pre></td></tr></table></figure>
-<h2 id="Finetuning_the_convnet"><a href="#Finetuning_the_convnet" class="headerlink" title="Finetuning the convnet"></a>Finetuning the convnet</h2><p>Load a pretrained model and reset final fully connected layer.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">model_ft = models.resnet18(pretrained=<span class="literal">True</span>)</span><br><span class="line">num_ftrs = model_ft.fc.in_features</span><br><span class="line">model_ft.fc = nn.Linear(num_ftrs, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">model_ft = model_ft.to(device)</span><br><span class="line"></span><br><span class="line">criterion = nn.CrossEntropyLoss()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Observe that all parameters are being optimized</span></span><br><span class="line">optimizer_ft = optim.SGD(model_ft.parameters(), lr=<span class="number">0.001</span>, momentum=<span class="number">0.9</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Decay LR by a factor of 0.1 every 7 epochs</span></span><br><span class="line">exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=<span class="number">7</span>, gamma=<span class="number">0.1</span>)</span><br></pre></td></tr></table></figure>
-<p>Train and evaluate<br>^^^^^^^^^^^^^^^^^^</p>
-<p>It should take around 15-25 min on CPU. On GPU though, it takes less than a<br>minute.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler,</span><br><span class="line">                       num_epochs=<span class="number">25</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>Epoch 0/24
-----------
-train Loss: 0.5223 Acc: 0.7377
-val Loss: 0.1710 Acc: 0.9477
+        <h1 id="Ovarian_Carcinomas_Histopathology_Dataset"><a href="#Ovarian_Carcinomas_Histopathology_Dataset" class="headerlink" title="Ovarian Carcinomas Histopathology Dataset"></a>Ovarian Carcinomas Histopathology Dataset</h1><p><img src="/uploads/sfu1.jpg" alt="./sfu1"></p>
+<p>该卵巢癌数据集是属于加拿大西门菲莎大学，数据为Whole slide image，源于5种亚型的卵巢癌活检切片，这五种病理类型为：高级别浆液性癌(HGSC)，低级别浆液性癌(LGSC)，子宫内膜样癌(EN)(10%)，透明细胞癌(CC)(10%)和黏液性癌(MC)(3%)<a href="http://www.nhc.gov.cn/ewebeditor/uploadfile/2018/12/20181221164002687.docx" target="_blank" rel="noopener">2018卵巢癌诊疗</a>。该数据集目前来自于80个不同的病人，切片的收集来自于全加拿大境内的6个不同的病理中心，每张whole slide image都是经过AperioScope scanner 40x放大进行数字化的，而且都是经过病理专家精选的包含尽可能多的病灶的切片，另外，每张图片都附带最终诊断所提供的免疫细胞结果。</p>
+<p>引入本数据集的目的是评估临床医生的诊断一致性和可重复性；并且可以对一些自动化的分型系统进行评估，这些系统的目标就是从whole slide image中预测卵巢癌亚型。</p>
+<p><a href="ensc-mica-www02.ensc.sfu.ca/download/">数据集下载地址</a></p>
+<p><img src="/uploads/types_context.jpg" alt="types_context"></p>
 
-Epoch 1/24
-----------
-train Loss: 0.5751 Acc: 0.7705
-val Loss: 0.1487 Acc: 0.9346
-
-Epoch 2/24
-----------
-train Loss: 0.4637 Acc: 0.8115
-val Loss: 0.2695 Acc: 0.8889
-
-Epoch 3/24
-----------
-train Loss: 0.4846 Acc: 0.7910
-val Loss: 0.2892 Acc: 0.9150
-
-Epoch 4/24
-----------
-train Loss: 0.3784 Acc: 0.8443
-val Loss: 0.2171 Acc: 0.9216
-
-Epoch 5/24
-----------
-train Loss: 0.6229 Acc: 0.7869
-val Loss: 0.3753 Acc: 0.8562
-
-Epoch 6/24
-----------
-train Loss: 0.6769 Acc: 0.7746
-val Loss: 0.2744 Acc: 0.8954
-
-Epoch 7/24
-----------
-train Loss: 0.3633 Acc: 0.8525
-val Loss: 0.1788 Acc: 0.9412
-
-Epoch 8/24
-----------
-train Loss: 0.3630 Acc: 0.8484
-val Loss: 0.1714 Acc: 0.9542
-
-Epoch 9/24
-----------
-train Loss: 0.2284 Acc: 0.9098
-val Loss: 0.1730 Acc: 0.9412
-
-Epoch 10/24
-----------
-train Loss: 0.2877 Acc: 0.8689
-val Loss: 0.1829 Acc: 0.9346
-
-Epoch 11/24
-----------
-train Loss: 0.2766 Acc: 0.8811
-val Loss: 0.1724 Acc: 0.9542
-
-Epoch 12/24
-----------
-train Loss: 0.3516 Acc: 0.8443
-val Loss: 0.1749 Acc: 0.9477
-
-Epoch 13/24
-----------
-train Loss: 0.3228 Acc: 0.8648
-val Loss: 0.1864 Acc: 0.9608
-
-Epoch 14/24
-----------
-train Loss: 0.2731 Acc: 0.8893
-val Loss: 0.1796 Acc: 0.9477
-
-Epoch 15/24
-----------
-train Loss: 0.2503 Acc: 0.8893
-val Loss: 0.1818 Acc: 0.9281
-
-Epoch 16/24
-----------
-train Loss: 0.2511 Acc: 0.9057
-val Loss: 0.1803 Acc: 0.9477
-
-Epoch 17/24
-----------
-train Loss: 0.2995 Acc: 0.8566
-val Loss: 0.1708 Acc: 0.9542
-
-Epoch 18/24
-----------
-train Loss: 0.3213 Acc: 0.8566
-val Loss: 0.1868 Acc: 0.9412
-
-Epoch 19/24
-----------
-train Loss: 0.3652 Acc: 0.8197
-val Loss: 0.1870 Acc: 0.9412
-
-Epoch 20/24
-----------
-train Loss: 0.2182 Acc: 0.9057
-val Loss: 0.1806 Acc: 0.9346
-
-Epoch 21/24
-----------
-train Loss: 0.2367 Acc: 0.9016
-val Loss: 0.1772 Acc: 0.9412
-
-Epoch 22/24
-----------
-train Loss: 0.2545 Acc: 0.9139
-val Loss: 0.1749 Acc: 0.9477
-
-Epoch 23/24
-----------
-train Loss: 0.3180 Acc: 0.8770
-val Loss: 0.1739 Acc: 0.9346
-
-Epoch 24/24
-----------
-train Loss: 0.3127 Acc: 0.8770
-val Loss: 0.1894 Acc: 0.9085
-
-Training complete in 3m 23s
-Best val Acc: 0.960784
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">visualize_model(model_ft)</span><br></pre></td></tr></table></figure>
-<p><img src="/uploads/output_15_0.png" alt="png"></p>
-<p><img src="/uploads/output_15_1.png" alt="png"></p>
-<p><img src="/uploads/output_15_2.png" alt="png"></p>
-<p><img src="/uploads/output_15_3.png" alt="png"></p>
-<p><img src="/uploads/output_15_4.png" alt="png"></p>
-<p><img src="/uploads/output_15_5.png" alt="png"></p>
-<h2 id="ConvNet_as_fixed_feature_extractor"><a href="#ConvNet_as_fixed_feature_extractor" class="headerlink" title="ConvNet as fixed feature extractor"></a>ConvNet as fixed feature extractor</h2><p>Here, we need to freeze all the network except the final layer. We need<br>to set <code>requires_grad == False</code> to freeze the parameters so that the<br>gradients are not computed in <code>backward()</code>.</p>
-<p>You can read more about this in the documentation <a href="https://pytorch.org/docs/notes/autograd.html#excluding-subgraphs-from-backward" target="_blank" rel="noopener">here</a>.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">model_conv = torchvision.models.resnet18(pretrained=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">for</span> param <span class="keyword">in</span> model_conv.parameters():</span><br><span class="line">    param.requires_grad = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Parameters of newly constructed modules have requires_grad=True by default</span></span><br><span class="line">num_ftrs = model_conv.fc.in_features</span><br><span class="line">model_conv.fc = nn.Linear(num_ftrs, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">model_conv = model_conv.to(device)</span><br><span class="line"></span><br><span class="line">criterion = nn.CrossEntropyLoss()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Observe that only parameters of final layer are being optimized as</span></span><br><span class="line"><span class="comment"># opposed to before.</span></span><br><span class="line">optimizer_conv = optim.SGD(model_conv.fc.parameters(), lr=<span class="number">0.001</span>, momentum=<span class="number">0.9</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Decay LR by a factor of 0.1 every 7 epochs</span></span><br><span class="line">exp_lr_scheduler = lr_scheduler.StepLR(optimizer_conv, step_size=<span class="number">7</span>, gamma=<span class="number">0.1</span>)</span><br></pre></td></tr></table></figure>
-<p>Train and evaluate<br>^^^^^^^^^^^^^^^^^^</p>
-<p>On CPU this will take about half the time compared to previous scenario.<br>This is expected as gradients don’t need to be computed for most of the<br>network. However, forward does need to be computed.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">model_conv = train_model(model_conv, criterion, optimizer_conv,</span><br><span class="line">                         exp_lr_scheduler, num_epochs=<span class="number">25</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>Epoch 0/24
-----------
-train Loss: 0.6335 Acc: 0.6967
-val Loss: 0.2280 Acc: 0.9412
-
-Epoch 1/24
-----------
-train Loss: 0.5771 Acc: 0.7582
-val Loss: 0.4647 Acc: 0.8039
-
-Epoch 2/24
-----------
-train Loss: 0.5371 Acc: 0.7541
-val Loss: 0.1816 Acc: 0.9412
-
-Epoch 3/24
-----------
-train Loss: 0.4779 Acc: 0.7828
-val Loss: 0.1838 Acc: 0.9477
-
-Epoch 4/24
-----------
-train Loss: 0.4504 Acc: 0.8238
-val Loss: 0.1906 Acc: 0.9412
-
-Epoch 5/24
-----------
-train Loss: 0.3483 Acc: 0.8443
-val Loss: 0.2637 Acc: 0.9085
-
-Epoch 6/24
-----------
-train Loss: 0.3935 Acc: 0.8320
-val Loss: 0.2439 Acc: 0.9346
-
-Epoch 7/24
-----------
-train Loss: 0.3281 Acc: 0.8402
-val Loss: 0.2319 Acc: 0.9346
-
-Epoch 8/24
-----------
-train Loss: 0.4083 Acc: 0.8197
-val Loss: 0.1908 Acc: 0.9412
-
-Epoch 9/24
-----------
-train Loss: 0.3697 Acc: 0.8361
-val Loss: 0.2086 Acc: 0.9542
-
-Epoch 10/24
-----------
-train Loss: 0.3684 Acc: 0.8525
-val Loss: 0.1911 Acc: 0.9477
-
-Epoch 11/24
-----------
-train Loss: 0.2994 Acc: 0.8730
-val Loss: 0.1783 Acc: 0.9412
-
-Epoch 12/24
-----------
-train Loss: 0.2693 Acc: 0.8934
-val Loss: 0.1975 Acc: 0.9346
-
-Epoch 13/24
-----------
-train Loss: 0.3357 Acc: 0.8689
-val Loss: 0.1898 Acc: 0.9477
-
-Epoch 14/24
-----------
-train Loss: 0.3462 Acc: 0.8484
-val Loss: 0.1892 Acc: 0.9412
-
-Epoch 15/24
-----------
-train Loss: 0.2450 Acc: 0.8975
-val Loss: 0.2065 Acc: 0.9477
-
-Epoch 16/24
-----------
-train Loss: 0.3358 Acc: 0.8443
-val Loss: 0.1904 Acc: 0.9542
-
-Epoch 17/24
-----------
-train Loss: 0.3156 Acc: 0.8689
-val Loss: 0.2199 Acc: 0.9412
-
-Epoch 18/24
-----------
-train Loss: 0.3760 Acc: 0.8320
-val Loss: 0.1786 Acc: 0.9346
-
-Epoch 19/24
-----------
-train Loss: 0.3425 Acc: 0.8279
-val Loss: 0.1967 Acc: 0.9477
-
-Epoch 20/24
-----------
-train Loss: 0.2886 Acc: 0.8689
-val Loss: 0.1963 Acc: 0.9477
-
-Epoch 21/24
-----------
-train Loss: 0.2771 Acc: 0.8770
-val Loss: 0.2036 Acc: 0.9477
-
-Epoch 22/24
-----------
-train Loss: 0.3054 Acc: 0.8648
-val Loss: 0.2064 Acc: 0.9477
-
-Epoch 23/24
-----------
-train Loss: 0.3619 Acc: 0.8156
-val Loss: 0.1629 Acc: 0.9412
-
-Epoch 24/24
-----------
-train Loss: 0.3707 Acc: 0.8279
-val Loss: 0.1873 Acc: 0.9477
-
-Training complete in 2m 18s
-Best val Acc: 0.954248
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">visualize_model(model_conv)</span><br><span class="line"></span><br><span class="line">plt.ioff()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p><img src="/uploads/output_20_0.png" alt="png"></p>
-<p><img src="/uploads/output_20_1.png" alt="png"></p>
-<p><img src="/uploads/output_20_2.png" alt="png"></p>
-<p><img src="/uploads/output_20_3.png" alt="png"></p>
-<p><img src="/uploads/output_20_4.png" alt="png"></p>
-<p><img src="/uploads/output_20_5.png" alt="png"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(model_conv)</span><br></pre></td></tr></table></figure>
-<pre><code>ResNet(
-  (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
-  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-  (relu): ReLU(inplace)
-  (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
-  (layer1): Sequential(
-    (0): BasicBlock(
-      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace)
-      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    )
-    (1): BasicBlock(
-      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace)
-      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    )
-  )
-  (layer2): Sequential(
-    (0): BasicBlock(
-      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
-      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace)
-      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (downsample): Sequential(
-        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
-        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      )
-    )
-    (1): BasicBlock(
-      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace)
-      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    )
-  )
-  (layer3): Sequential(
-    (0): BasicBlock(
-      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
-      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace)
-      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (downsample): Sequential(
-        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
-        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      )
-    )
-    (1): BasicBlock(
-      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace)
-      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    )
-  )
-  (layer4): Sequential(
-    (0): BasicBlock(
-      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
-      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace)
-      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (downsample): Sequential(
-        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
-        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      )
-    )
-    (1): BasicBlock(
-      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace)
-      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    )
-  )
-  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
-  (fc): Linear(in_features=512, out_features=2, bias=True)
-)
-</code></pre>
       
 
       
@@ -636,11 +230,11 @@ Best val Acc: 0.954248
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">pytorch</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ovarian cancer</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">dataset</a>
         		</li>
       		
 		</ul>
@@ -652,7 +246,7 @@ Best val Acc: 0.954248
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/pytorch//" class="article-tag-list-link color3">pytorch</a>
+        			<a href="/categories/医学影像数据集//" class="article-tag-list-link color3">医学影像数据集</a>
         		</li>
       		
 		</ul>
@@ -707,7 +301,7 @@ Best val Acc: 0.954248
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/03/迁移学习/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/01/卵巢癌数据集1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -721,18 +315,9 @@ Best val Acc: 0.954248
   
 <nav id="article-nav">
   
-    <a href="/2019/06/03/chap1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Numpy第一讲：初识Numpy
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/06/02/测试/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Markdown的初次见面</div>
+    <a href="/2019/06/25/openslide学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Openslide随笔</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -759,7 +344,7 @@ Best val Acc: 0.954248
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Transfer_Learning_Tutorial"><span class="toc-number">1.</span> <span class="toc-text">Transfer Learning Tutorial</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Load_Data"><span class="toc-number">1.1.</span> <span class="toc-text">Load Data</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Training_the_model"><span class="toc-number">1.2.</span> <span class="toc-text">Training the model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Finetuning_the_convnet"><span class="toc-number">1.3.</span> <span class="toc-text">Finetuning the convnet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ConvNet_as_fixed_feature_extractor"><span class="toc-number">1.4.</span> <span class="toc-text">ConvNet as fixed feature extractor</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ovarian_Carcinomas_Histopathology_Dataset"><span class="toc-number">1.</span> <span class="toc-text">Ovarian Carcinomas Histopathology Dataset</span></a></li></ol>
                     </div>
                 </span>
             </div>
