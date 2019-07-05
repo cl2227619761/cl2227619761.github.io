@@ -6,19 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Category: Numpy | 曹雷的博客</title>
+  <title>Matlab第一弹 | 曹雷的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="网页描述">
-<meta name="keywords" content="深度学习">
-<meta property="og:type" content="website">
-<meta property="og:title" content="曹雷的博客">
-<meta property="og:url" content="http://yoursite.com/categories/Numpy/index.html">
+  <meta name="description" content="Matlab基础本文包括Matlab的一些基础知识，包括基本的数据类型，运算符和特殊的符号等，以及Matlab中日期和时间的表示方法，计时函数的应用。">
+<meta name="keywords" content="matlab,program">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matlab第一弹">
+<meta property="og:url" content="http://yoursite.com/2019/07/05/Matlab第一弹/index.html">
 <meta property="og:site_name" content="曹雷的博客">
-<meta property="og:description" content="网页描述">
+<meta property="og:description" content="Matlab基础本文包括Matlab的一些基础知识，包括基本的数据类型，运算符和特殊的符号等，以及Matlab中日期和时间的表示方法，计时函数的应用。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/uploads/matlab-logo.jpg">
+<meta property="og:image" content="http://yoursite.com/uploads/matlab1.png">
+<meta property="og:image" content="http://yoursite.com/uploads/matlab2.png">
+<meta property="og:image" content="http://yoursite.com/uploads/cellplt.jpg">
+<meta property="og:image" content="http://yoursite.com/uploads/cell2struct.png">
+<meta property="og:image" content="http://yoursite.com/uploads/stu.png">
+<meta property="og:image" content="http://yoursite.com/uploads/stu2.png">
+<meta property="og:image" content="http://yoursite.com/uploads/stu_field.png">
+<meta property="og:image" content="http://yoursite.com/uploads/struct.png">
+<meta property="og:updated_time" content="2019-07-05T14:35:43.693Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="曹雷的博客">
-<meta name="twitter:description" content="网页描述">
+<meta name="twitter:title" content="Matlab第一弹">
+<meta name="twitter:description" content="Matlab基础本文包括Matlab的一些基础知识，包括基本的数据类型，运算符和特殊的符号等，以及Matlab中日期和时间的表示方法，计时函数的应用。">
+<meta name="twitter:image" content="http://yoursite.com/uploads/matlab-logo.jpg">
   
     <link rel="alternative" href="/atom.xml" title="曹雷的博客" type="application/atom+xml">
   
@@ -167,181 +178,526 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Matlab第一弹" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Matlab第一弹
+    </h1>
+  
+
+        
+        <a href="/2019/07/05/Matlab第一弹/" class="archive-article-date">
+  	<time datetime="2019-07-05T14:26:46.453Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-05</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/uploads/matlab-logo.jpg" alt="logo"></p>
+<h1 id="Matlab_u57FA_u7840"><a href="#Matlab_u57FA_u7840" class="headerlink" title="Matlab基础"></a>Matlab基础</h1><p>本文包括Matlab的一些基础知识，包括基本的数据类型，运算符和特殊的符号等，以及Matlab中日期和时间的表示方法，计时函数的应用。</p>
+<a id="more"></a>
+<h2 id="u6570_u636E_u7C7B_u578B"><a href="#u6570_u636E_u7C7B_u578B" class="headerlink" title="数据类型"></a>数据类型</h2><p>在Matlab中有15种基本的数据类型，分别是8种整型数据，单精度浮点型，双精度浮点型，逻辑型，字符串型，单元数组，结构体类型和函数句柄。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">数据类型</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">int8, int16, int32, int64</td>
+<td style="text-align:center">有符号整型</td>
+</tr>
+<tr>
+<td style="text-align:center">uint8, uint18, uint32, uint64</td>
+<td style="text-align:center">无符号整型</td>
+</tr>
+<tr>
+<td style="text-align:center">single</td>
+<td style="text-align:center">单精度浮点型</td>
+</tr>
+<tr>
+<td style="text-align:center">double</td>
+<td style="text-align:center">双精度浮点型</td>
+</tr>
+<tr>
+<td style="text-align:center">logical</td>
+<td style="text-align:center">逻辑型</td>
+</tr>
+<tr>
+<td style="text-align:center">char</td>
+<td style="text-align:center">字符串型</td>
+</tr>
+<tr>
+<td style="text-align:center">struct</td>
+<td style="text-align:center">结构体型</td>
+</tr>
+<tr>
+<td style="text-align:center">cell</td>
+<td style="text-align:center">单元数组型</td>
+</tr>
+<tr>
+<td style="text-align:center">function_handle</td>
+<td style="text-align:center">函数句柄型</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">a1 = int8(<span class="number">6</span>)  <span class="comment">% int8整型数值</span></span><br><span class="line">a2 = int16(<span class="number">-20</span>)  <span class="comment">% int16整型数值</span></span><br><span class="line">a3 = uint32(<span class="number">100</span>)  <span class="comment">% uint32无符号整型数值</span></span><br><span class="line">a4 = uint64(<span class="number">200</span>)  <span class="comment">% uint64无符号整型数值</span></span><br><span class="line">b1 = single(<span class="number">3.5</span>)  <span class="comment">% 单精度浮点型数值</span></span><br><span class="line">b2 = <span class="number">12</span>  <span class="comment">% 默认为双精度浮点型数值</span></span><br><span class="line">c1 = <span class="built_in">true</span>  <span class="comment">% 逻辑型数据</span></span><br><span class="line">c2&#123;<span class="number">1</span>, <span class="number">1</span>&#125; = <span class="number">100</span>  <span class="comment">% 单元数组型数据</span></span><br><span class="line">c3 = <span class="string">'hello'</span>  <span class="comment">% 字符串型数据</span></span><br><span class="line">c4.name = <span class="string">'robbin'</span>  <span class="comment">% 结构体型数据</span></span><br><span class="line">d = @<span class="built_in">cos</span>  <span class="comment">% 函数句柄型数据</span></span><br></pre></td></tr></table></figure>
+<h3 id="u6570_u503C_u7C7B_u578B"><a href="#u6570_u503C_u7C7B_u578B" class="headerlink" title="数值类型"></a>数值类型</h3><p>在Matlab种，数值类型分为整数和浮点数。整数又分为有符号整数和无符号整数；浮点数分为单精度浮点数和双精度浮点数。下面介绍整数，浮点数和复数，以及数值的显示格式。</p>
+<h4 id="u6574_u6570"><a href="#u6574_u6570" class="headerlink" title="整数"></a>整数</h4><p>在Matlab中共有8中整数类型，其中4种为有符号型，4种为无符号型。默认的数值类型为双精度浮点型，一般通过整型函数将浮点型数值转为整型数值。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:center">有无符号</th>
+<th style="text-align:center">占用的字节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">int8</td>
+<td style="text-align:center">有符号</td>
+<td style="text-align:center">1个字节</td>
+</tr>
+<tr>
+<td style="text-align:center">int16</td>
+<td style="text-align:center">有符号</td>
+<td style="text-align:center">2个字节</td>
+</tr>
+<tr>
+<td style="text-align:center">int32</td>
+<td style="text-align:center">有符号</td>
+<td style="text-align:center">4个字节</td>
+</tr>
+<tr>
+<td style="text-align:center">int64</td>
+<td style="text-align:center">有符号</td>
+<td style="text-align:center">8个字节</td>
+</tr>
+<tr>
+<td style="text-align:center">uint8</td>
+<td style="text-align:center">无符号</td>
+<td style="text-align:center">1个字节</td>
+</tr>
+<tr>
+<td style="text-align:center">uint16</td>
+<td style="text-align:center">无符号</td>
+<td style="text-align:center">2个字节</td>
+</tr>
+<tr>
+<td style="text-align:center">uint32</td>
+<td style="text-align:center">无符号</td>
+<td style="text-align:center">4个字节</td>
+</tr>
+<tr>
+<td style="text-align:center">uint64</td>
+<td style="text-align:center">无符号</td>
+<td style="text-align:center">8个字节</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">24</span>  <span class="comment">% 双精度浮点型数值</span></span><br><span class="line">b1 = int8(a)  <span class="comment">% 转为int8</span></span><br><span class="line">b2 = int16(a)</span><br><span class="line">b3 = int32(a)</span><br><span class="line">b4 = int64(a)</span><br></pre></td></tr></table></figure>
+<p>在Matlab中有很多取整函数，可以将小数转变为整数</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">round</td>
+<td style="text-align:center">向最接近的整数取整，如果小数为0.5，则取绝对值大的整数，即四舍五入</td>
+</tr>
+<tr>
+<td style="text-align:center">fix</td>
+<td style="text-align:center">向0取整</td>
+</tr>
+<tr>
+<td style="text-align:center">floor</td>
+<td style="text-align:center">不大于该数的最接近整数，即左取整</td>
+</tr>
+<tr>
+<td style="text-align:center">ceil</td>
+<td style="text-align:center">不小于该数的最接近整数，即右取整</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a1 = <span class="built_in">round</span>(<span class="number">2.5</span>)  <span class="comment">% 3</span></span><br><span class="line">a2 = <span class="built_in">round</span>(<span class="number">-2.4</span>)  <span class="comment">% -2</span></span><br><span class="line">a3 = <span class="built_in">round</span>(<span class="number">-2.5</span>)  <span class="comment">% -3</span></span><br><span class="line">b1 = <span class="built_in">fix</span>(<span class="number">-3.6</span>)  <span class="comment">% -3</span></span><br><span class="line">b2 = <span class="built_in">fix</span>(<span class="number">-3.5</span>)  <span class="comment">% -3</span></span><br><span class="line">c1 = <span class="built_in">floor</span>(<span class="number">4.9</span>)  <span class="comment">% 4</span></span><br><span class="line">c2 = <span class="built_in">floor</span>(<span class="number">-4.2</span>)  <span class="comment">% -5</span></span><br><span class="line">d1 = <span class="built_in">ceil</span>(<span class="number">4.2</span>)  <span class="comment">% 5</span></span><br><span class="line">d2 = <span class="built_in">ceil</span>(<span class="number">-4.4</span>)  <span class="comment">% -4</span></span><br></pre></td></tr></table></figure>
+<h4 id="u6570_u636E_u663E_u793A_u683C_u5F0F"><a href="#u6570_u636E_u663E_u793A_u683C_u5F0F" class="headerlink" title="数据显示格式"></a>数据显示格式</h4><p>可以采用函数<code>format()</code>确定数值的显示格式。改变数值的显示格式后，会一直有效，直到再次利用<code>format()</code>函数进行修改。注意该函数只是改变数值的显示格式，并不会改变数值本身的值。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">format函数格式</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">format short 或 format(“short”)</td>
+<td style="text-align:center">默认显示；保留小数点后4位</td>
+</tr>
+<tr>
+<td style="text-align:center">format long 或 format(“long”)</td>
+<td style="text-align:center">有效数字16位</td>
+</tr>
+<tr>
+<td style="text-align:center">format long e</td>
+<td style="text-align:center">有效数字16位加3位指数</td>
+</tr>
+<tr>
+<td style="text-align:center">format short e</td>
+<td style="text-align:center">有效数字5位加3位指数</td>
+</tr>
+<tr>
+<td style="text-align:center">format bank 或 format(“bank”)</td>
+<td style="text-align:center">保留2位小数</td>
+</tr>
+<tr>
+<td style="text-align:center">format + 或 format(“+”)</td>
+<td style="text-align:center">只给出正负</td>
+</tr>
+<tr>
+<td style="text-align:center">format rational 或 format(“rational”)</td>
+<td style="text-align:center">以分数形式表示</td>
+</tr>
+<tr>
+<td style="text-align:center">format hex 或 format(“hex”)</td>
+<td style="text-align:center">16进制数</td>
+</tr>
+<tr>
+<td style="text-align:center">format long g+</td>
+<td style="text-align:center">15位有效数</td>
+</tr>
+<tr>
+<td style="text-align:center">format short g+</td>
+<td style="text-align:center">5位有效数</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">format short</span><br><span class="line">a = <span class="number">12.3456789</span></span><br><span class="line">format short</span><br><span class="line">a</span><br><span class="line">format long</span><br><span class="line">a</span><br><span class="line">format long e</span><br><span class="line">a</span><br><span class="line">format short e</span><br><span class="line">a</span><br><span class="line">format bank</span><br><span class="line">a</span><br><span class="line">format +</span><br><span class="line">a</span><br><span class="line">format rational</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+<h3 id="u903B_u8F91_u7C7B_u578B"><a href="#u903B_u8F91_u7C7B_u578B" class="headerlink" title="逻辑类型"></a>逻辑类型</h3><p>Matlab中的运算包括数值计算，关系计算和逻辑计算。关系计算和逻辑计算的结果为逻辑类型。逻辑类型的数据包括逻辑真和逻辑假，1代表逻辑真，用true表示；0代表逻辑假，用false表示。此外，可以使用<code>logical()</code>函数将数值型转为逻辑型，任何非0数值转换为逻辑真；数值0转换为逻辑假。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a1 = <span class="built_in">true</span>  <span class="comment">% 逻辑真数据</span></span><br><span class="line">a2 = <span class="built_in">false</span>  <span class="comment">% 逻辑假数据</span></span><br><span class="line">a3 = <span class="built_in">true</span>(<span class="number">3</span>, <span class="number">4</span>)  <span class="comment">% 建立一个3行4列的矩阵，其中的数据均为逻辑真数据</span></span><br><span class="line">a4 = <span class="built_in">false</span>(<span class="number">3</span>)  <span class="comment">% 建立一个3行3列的矩阵，其中的数据均为逻辑假数据</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">3</span></span><br><span class="line">logical(a)  <span class="comment">% 将数值型转为逻辑型</span></span><br><span class="line">b = <span class="number">0</span></span><br><span class="line">logical(b)  <span class="comment">% 将数值型转为逻辑型</span></span><br><span class="line">c = [<span class="number">1.3</span> <span class="number">-3</span> <span class="number">0</span>;<span class="number">2</span> <span class="number">0</span> <span class="number">4</span>;<span class="number">0.01</span> <span class="number">9</span> <span class="number">1</span>]</span><br><span class="line">logical(c)  <span class="comment">% 将数值型转为逻辑型</span></span><br></pre></td></tr></table></figure>
+<h3 id="u5B57_u7B26_u548C_u5B57_u7B26_u4E32"><a href="#u5B57_u7B26_u548C_u5B57_u7B26_u4E32" class="headerlink" title="字符和字符串"></a>字符和字符串</h3><p>在Matlab中，字符型数据类型用char表示，字符和字符串不进行区分，都用单引号括起来</p>
+<h3 id="u51FD_u6570_u53E5_u67C4"><a href="#u51FD_u6570_u53E5_u67C4" class="headerlink" title="函数句柄"></a>函数句柄</h3><p>在Matlab中，通过函数句柄来间接调用函数，函数句柄的数据类型为function_handle. 函数句柄可以通过符号@后跟函数命令来创建，例如程序<code>fhandle=@cos</code>，创建了函数<code>cos()</code>的函数句柄，以后就可以通过函数句柄<code>fhandle</code>来间接调用函数<code>cos()</code>了。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f1 = @<span class="built_in">cos</span></span><br><span class="line">t = <span class="number">0</span>:<span class="built_in">pi</span> / <span class="number">5</span>:<span class="built_in">pi</span></span><br><span class="line">f1(t)</span><br><span class="line">f2 = @<span class="built_in">complex</span></span><br><span class="line">f2(<span class="number">3</span>, <span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="/uploads/matlab1.png" alt="函数句柄"></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f1 = @char</span><br><span class="line">s1 = func2str(f1)  <span class="comment">% 将函数句柄转为字符串</span></span><br><span class="line">f2 = str2func(s1)  <span class="comment">% 将字符串转为函数句柄</span></span><br><span class="line">isa(f1, <span class="string">"function_handle"</span>)  <span class="comment">% 判断变量f1是否为函数句柄</span></span><br><span class="line"><span class="built_in">isequal</span>(f1, f2)  <span class="comment">% 判断f1, f2两个函数句柄是否表示同一个函数</span></span><br></pre></td></tr></table></figure>
+<p><img src="/uploads/matlab2.png" alt="函数句柄"></p>
+<h3 id="u5355_u5143_u6570_u7EC4_u7C7B_u578B"><a href="#u5355_u5143_u6570_u7EC4_u7C7B_u578B" class="headerlink" title="单元数组类型"></a>单元数组类型</h3><p>单元数组是一种比较特殊的数据类型，每个元素都以单元的形式存在。在Matlab中，使用大括号<code>{}</code>建立单元数组，也可以使用函数<code>cell()</code>建立单元数组。在获取单元数组的元素时，也采用大括号表示坐标。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">cell</td>
+<td style="text-align:center">创建单元数组</td>
+</tr>
+<tr>
+<td style="text-align:center">celldisp</td>
+<td style="text-align:center">查看单元数组的内容</td>
+</tr>
+<tr>
+<td style="text-align:center">cellplot</td>
+<td style="text-align:center">将单元数组以彩色图形的形式显示</td>
+</tr>
+<tr>
+<td style="text-align:center">num2cell</td>
+<td style="text-align:center">将矩阵转为单元数组</td>
+</tr>
+<tr>
+<td style="text-align:center">cell2struct</td>
+<td style="text-align:center">将单元数组转为结构体</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 建立单元数组</span></span><br><span class="line">c = &#123;<span class="string">'中国'</span>, <span class="string">'China'</span>; [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span>], <span class="number">100</span>&#125;  <span class="comment">% 使用;进行换行，建立2行2列的单元数组</span></span><br><span class="line">c&#123;<span class="number">1</span>, <span class="number">1</span>&#125;  <span class="comment">% 第1行1列的元素</span></span><br><span class="line">c&#123;<span class="number">2</span>, <span class="number">1</span>&#125;</span><br><span class="line">c&#123;<span class="number">2</span>, <span class="number">2</span>&#125; = []  <span class="comment">% 将单元数组的第2行2列设为空，也就是删除</span></span><br></pre></td></tr></table></figure>
+<p>使用<code>cell()</code>函数建立单元数组</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 使用cell函数建立单元数组</span></span><br><span class="line">c = cell(<span class="number">2</span>, <span class="number">3</span>)  <span class="comment">% 建立一个2行3列的单元数组，初始的时候元素都是[]</span></span><br><span class="line">c&#123;<span class="number">1</span>, <span class="number">1</span>&#125; = [<span class="number">1</span>:<span class="number">3</span>;<span class="number">3</span>:<span class="number">5</span>]  <span class="comment">% 给单元数组的第1行1列的元素进行赋值</span></span><br><span class="line">c&#123;<span class="number">2</span>, <span class="number">2</span>&#125; = <span class="string">'China'</span></span><br><span class="line">c&#123;<span class="number">2</span>, <span class="number">3</span>&#125; = <span class="string">'Robbin'</span></span><br><span class="line">c&#123;<span class="number">2</span>, <span class="number">1</span>&#125; = <span class="number">100</span></span><br></pre></td></tr></table></figure>
+<p>使用<code>celldisp()</code>函数显示单元数组的内容</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 使用celldisp函数显示单元数组的内容</span></span><br><span class="line">c = &#123;<span class="built_in">eye</span>(<span class="number">2</span>), <span class="string">'China'</span>; [<span class="number">1</span>:<span class="number">4</span>], <span class="number">100</span>&#125;  <span class="comment">% 建立2行2列的单元数组</span></span><br><span class="line">celldisp(c)  <span class="comment">% 显示单元数组的内容</span></span><br><span class="line">celldisp(c, <span class="string">'MyCell'</span>)  <span class="comment">% 显示时候的名字取为MyCell</span></span><br></pre></td></tr></table></figure>
+<p><code>cellplot()</code>函数可以将单元数组以彩色的图形进行显示</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 使用cellplot函数将单元数组以彩色图形的形式进行显示</span></span><br><span class="line">c = &#123;<span class="string">'America'</span>, <span class="string">'China'</span>; [<span class="number">1</span>:<span class="number">4</span>], <span class="number">100</span>&#125;</span><br><span class="line"><span class="built_in">figure</span>;</span><br><span class="line">out = cellplot(c, <span class="string">'legend'</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="/uploads/cellplt.jpg" alt="cellplot"></p>
+<p>单元数组的操作</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 单元数组的操作</span></span><br><span class="line">c = &#123;<span class="string">'America'</span>, <span class="string">'China'</span>; [<span class="number">1</span>:<span class="number">4</span>;<span class="number">2</span>:<span class="number">5</span>], <span class="number">10</span>&#125;  <span class="comment">% 建立2行2列的单元数组</span></span><br><span class="line">c&#123;<span class="number">2</span>, <span class="number">4</span>&#125; = <span class="number">100</span>  <span class="comment">% 单元数组的扩充</span></span><br><span class="line">c(<span class="number">1</span>, :)  <span class="comment">% 使用小括号查看第一行元素</span></span><br><span class="line">c(:, <span class="number">3</span>) = []  <span class="comment">% 删除第3列</span></span><br><span class="line">d = &#123;<span class="string">'Japan'</span>, <span class="string">'India'</span>; [], <span class="number">3</span>&#125;</span><br><span class="line">e = [c, d]  <span class="comment">% 单元数组的合并</span></span><br></pre></td></tr></table></figure>
+<p>函数<code>num2cell()</code>用来将矩阵转为单元数组；函数<code>iscell()</code>用来判断变量是否为单元数组</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">2.3</span> <span class="number">4.5</span> <span class="number">9.6</span>;<span class="number">3.5</span> <span class="number">3.2</span> <span class="number">8.5</span>]</span><br><span class="line">c = <span class="built_in">num2cell</span>(a)</span><br><span class="line">iscell(a)</span><br><span class="line">iscell(c)</span><br></pre></td></tr></table></figure>
+<p>函数<code>cell2struct()</code>用来将单元数组转为结构体类型</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% cell2struct函数将单元数组转为结构体类型</span></span><br><span class="line">c = &#123;<span class="string">'Dr.Zhang'</span>, <span class="number">1.80</span>, <span class="number">20110111</span>, [<span class="number">80</span> <span class="number">90</span> <span class="number">96</span>]&#125;</span><br><span class="line">field = &#123;<span class="string">'name'</span>, <span class="string">'height'</span>, <span class="string">'num'</span>, <span class="string">'score'</span>&#125;</span><br><span class="line">s = cell2struct(c, field, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="/uploads/cell2struct.png" alt="cell2struct"></p>
+<h3 id="u7ED3_u6784_u4F53_u7C7B_u578B"><a href="#u7ED3_u6784_u4F53_u7C7B_u578B" class="headerlink" title="结构体类型"></a>结构体类型</h3><p>结构体是按照成员变量名组织起来的不同数据类型数据的集合。每个成员变量用指针操作符<code>&quot;.&quot;</code>表示，例如<code>A.name</code>表示结构体变量A的name成员变量。Matlab中的结构体类型常用的函数如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">struct</td>
+<td style="text-align:center">建立结构体变量</td>
+<td style="text-align:center">orderfields</td>
+<td style="text-align:center">对结构体变量的成员进行排序</td>
+</tr>
+<tr>
+<td style="text-align:center">isstruct</td>
+<td style="text-align:center">是否为结构体</td>
+<td style="text-align:center">getfield</td>
+<td style="text-align:center">得到结构体的成员变量</td>
+</tr>
+<tr>
+<td style="text-align:center">isfield</td>
+<td style="text-align:center">是否为结构体成员</td>
+<td style="text-align:center">setfield</td>
+<td style="text-align:center">设置结构体的成员变量</td>
+</tr>
+<tr>
+<td style="text-align:center">fieldnames</td>
+<td style="text-align:center">结构体变量成员的名字</td>
+<td style="text-align:center">rmfield</td>
+<td style="text-align:center">删除结构体的成员变量</td>
+</tr>
+<tr>
+<td style="text-align:center">substruct</td>
+<td style="text-align:center">子结构体</td>
+<td style="text-align:center">cell2struct</td>
+<td style="text-align:center">单元型变量转为结构体变量</td>
+</tr>
+<tr>
+<td style="text-align:center">struct2cell</td>
+<td style="text-align:center">结构体变量转为单元型变量</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p>直接建立结构体变量</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 结构体变量</span></span><br><span class="line">stu(<span class="number">1</span>).name = <span class="string">'zhang san'</span></span><br><span class="line">stu(<span class="number">1</span>).age = <span class="number">28</span></span><br><span class="line">stu(<span class="number">1</span>).gender = <span class="string">'male'</span></span><br><span class="line">stu(<span class="number">2</span>).name = <span class="string">'li si'</span></span><br><span class="line">stu(<span class="number">2</span>).age = <span class="number">19</span></span><br><span class="line">stu</span><br></pre></td></tr></table></figure>
+<p><img src="/uploads/stu.png" alt="struct"></p>
+<p><img src="/uploads/stu2.png" alt="stu2"></p>
+<p>查看成员变量以及成员变量的值</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stu(<span class="number">1</span>)  <span class="comment">% 查看结构体变量stu的第一行成员变量以及其值</span></span><br><span class="line">stu(<span class="number">2</span>)  <span class="comment">% 查看结构体变量stu的第二行成员变量以及其值</span></span><br></pre></td></tr></table></figure>
+<p><img src="/uploads/stu_field.png" alt="stu_field"></p>
+<p>使用<code>struct()</code>函数建立结构体变量</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 使用struct建立结构体变量，有三个成员变量，分别为type, color, data</span></span><br><span class="line">s1 = struct(<span class="string">'type'</span>, &#123;<span class="string">'big'</span>, <span class="string">'little'</span>&#125;, <span class="string">'color'</span>, &#123;<span class="string">'red'</span>&#125;, <span class="string">'data'</span>, &#123;[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>; <span class="number">2</span> <span class="number">1</span> <span class="number">2</span>]&#125;)</span><br><span class="line">s1(<span class="number">1</span>)  <span class="comment">% 结构体变量s1的第一行成员变量及其值</span></span><br><span class="line">s1(<span class="number">2</span>)  <span class="comment">% 第二行成员变量及其值</span></span><br></pre></td></tr></table></figure>
+<p>使用<code>rmfield()</code>函数删除结构体成员变量</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 删除成员变量使用函数rmfield</span></span><br><span class="line">s2 = rmfield(s1, <span class="string">'color'</span>)  <span class="comment">% 删除成员变量color</span></span><br><span class="line">s3 = rmfield(s1, &#123;<span class="string">'type'</span>, <span class="string">'color'</span>&#125;)  <span class="comment">% 同时删除多个成员变量用大括号括起来</span></span><br></pre></td></tr></table></figure>
+<p><code>isstruct()</code>函数用来判断变量是否为结构体变量；<code>isfield()</code>函数用来判断变量是否为结构体变量的成员变量</p>
+<p><code>fieldnames()</code>函数用来获取结构体变量的成员变量的名字；<code>orderfields()</code>函数用来对结构体变量的成员变量按照字母顺序进行排序。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 建立结构体变量s</span></span><br><span class="line">s = struct(<span class="string">'one'</span>, <span class="number">1</span>, <span class="string">'two'</span>, <span class="number">2</span>, <span class="string">'three'</span>, <span class="number">3</span>, <span class="string">'four'</span>, <span class="number">4</span>)</span><br><span class="line">f1 = fieldnames(s)  <span class="comment">% 获取结构体变量s的成员变量的名字</span></span><br><span class="line">f2 = orderfields(s)  <span class="comment">% 按照结构体变量的成员变量的名字的字母顺序对成员变量进行排序</span></span><br></pre></td></tr></table></figure>
+<p><img src="/uploads/struct.png" alt="field_and_order"></p>
+<p>未完待续。。。。。。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/13/chap3/" class="archive-article-date">
-  	<time datetime="2019-06-13T08:55:45.300Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/13/chap3/">Numpy第三讲（部分）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">numpy</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">matlab</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">program</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Numpy//" class="article-tag-list-link color1">Numpy</a>
+        			<a href="/categories/MATLAB//" class="article-tag-list-link color2">MATLAB</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/05/Matlab第一弹/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/10/chap2/" class="archive-article-date">
-  	<time datetime="2019-06-10T14:13:18.290Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-10</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/05/自动求导/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Pytorch第二弹</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/10/chap2/">Numpy第二讲：初始数组</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">numpy</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Numpy//" class="article-tag-list-link color1">Numpy</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Matlab_u57FA_u7840"><span class="toc-number">1.</span> <span class="toc-text">Matlab基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u6570_u636E_u7C7B_u578B"><span class="toc-number">1.1.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u6570_u503C_u7C7B_u578B"><span class="toc-number">1.1.1.</span> <span class="toc-text">数值类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u6574_u6570"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">整数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u6570_u636E_u663E_u793A_u683C_u5F0F"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">数据显示格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u903B_u8F91_u7C7B_u578B"><span class="toc-number">1.1.2.</span> <span class="toc-text">逻辑类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5B57_u7B26_u548C_u5B57_u7B26_u4E32"><span class="toc-number">1.1.3.</span> <span class="toc-text">字符和字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u51FD_u6570_u53E5_u67C4"><span class="toc-number">1.1.4.</span> <span class="toc-text">函数句柄</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5355_u5143_u6570_u7EC4_u7C7B_u578B"><span class="toc-number">1.1.5.</span> <span class="toc-text">单元数组类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u7ED3_u6784_u4F53_u7C7B_u578B"><span class="toc-number">1.1.6.</span> <span class="toc-text">结构体类型</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/03/chap1/" class="archive-article-date">
-  	<time datetime="2019-06-03T13:51:36.932Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/03/chap1/">Numpy第一讲：初识Numpy</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">numpy</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Numpy//" class="article-tag-list-link color1">Numpy</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "qFcxhiJ5RFPqGPYrVIciTIFv-gzGzoHsz",
+            app_key: "0XDRMoXHEHHDdWFMPNYqAHS2",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
+</script>
+    </section>
   
-    </div></section>
   
 
-    
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -370,10 +726,10 @@ ga('send', 'pageview');
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
