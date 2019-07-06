@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: program | 曹雷的博客</title>
+  <title>Matlab第二弹 | 曹雷的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="网页描述">
-<meta name="keywords" content="深度学习">
-<meta property="og:type" content="website">
-<meta property="og:title" content="曹雷的博客">
-<meta property="og:url" content="http://yoursite.com/tags/program/index.html">
+  <meta name="description" content="数组和矩阵分析Matlab语言最基本和最重要的功能就是进行矩阵运算，所有的数值功能都以矩阵为基本单元来实现。">
+<meta name="keywords" content="matlab,program">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matlab第二弹">
+<meta property="og:url" content="http://yoursite.com/2019/07/06/数组和矩阵分析/index.html">
 <meta property="og:site_name" content="曹雷的博客">
-<meta property="og:description" content="网页描述">
+<meta property="og:description" content="数组和矩阵分析Matlab语言最基本和最重要的功能就是进行矩阵运算，所有的数值功能都以矩阵为基本单元来实现。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/uploads/matlab-logo.jpg">
+<meta property="og:updated_time" content="2019-07-06T09:53:10.908Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="曹雷的博客">
-<meta name="twitter:description" content="网页描述">
+<meta name="twitter:title" content="Matlab第二弹">
+<meta name="twitter:description" content="数组和矩阵分析Matlab语言最基本和最重要的功能就是进行矩阵运算，所有的数值功能都以矩阵为基本单元来实现。">
+<meta name="twitter:image" content="http://yoursite.com/uploads/matlab-logo.jpg">
   
     <link rel="alternative" href="/atom.xml" title="曹雷的博客" type="application/atom+xml">
   
@@ -167,36 +170,74 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-数组和矩阵分析" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Matlab第二弹
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/06/数组和矩阵分析/" class="archive-article-date">
+
+        
+        <a href="/2019/07/06/数组和矩阵分析/" class="archive-article-date">
   	<time datetime="2019-07-06T09:47:15.551Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-06</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/06/数组和矩阵分析/">Matlab第二弹</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/uploads/matlab-logo.jpg" alt="matlablogo"></p>
+<h1 id="u6570_u7EC4_u548C_u77E9_u9635_u5206_u6790"><a href="#u6570_u7EC4_u548C_u77E9_u9635_u5206_u6790" class="headerlink" title="数组和矩阵分析"></a>数组和矩阵分析</h1><p>Matlab语言最基本和最重要的功能就是进行矩阵运算，所有的数值功能都以矩阵为基本单元来实现。<br><a id="more"></a></p>
+<h2 id="u6570_u7EC4_u53CA_u5176_u51FD_u6570"><a href="#u6570_u7EC4_u53CA_u5176_u51FD_u6570" class="headerlink" title="数组及其函数"></a>数组及其函数</h2><p>下面将介绍数组的建立，以及数组的常用操作等，包括数组的算术运算，关系运算和逻辑运算，以及数组信息的获取等。</p>
+<h3 id="u6570_u7EC4_u7684_u5EFA_u7ACB_u548C_u64CD_u4F5C"><a href="#u6570_u7EC4_u7684_u5EFA_u7ACB_u548C_u64CD_u4F5C" class="headerlink" title="数组的建立和操作"></a>数组的建立和操作</h3><p>在Matlab中，一般使用方括号<code>[]</code>，逗号<code>,</code>，空格以及分号<code>;</code>来创建数组。数组中同一行的元素之间用<strong>逗号</strong>或者<strong>空格</strong>进行分割，不同行之间用<strong>分号</strong>进行分割，需要注意的是，这些符号必须在<em>英文状态</em>下输入。</p>
+<p><strong>空数组</strong>是Matlab中最特殊的数组，不含有任何元素，可以用于数组的清空或者声明。创建空数组只需要把变量赋值为一对<strong>方括号</strong>即可。数组是有方向的，行向量是以行方向分布的，列向量是以列方向分布的。</p>
+<ul>
+<li>创建一维行向量，把所有用空格或逗号分割的元素用方括号括起来。</li>
+<li>创建一维列向量，把所有用分号分割的元素用方括号括起来。</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">A = []  <span class="comment">% 建立空数组</span></span><br><span class="line">B = [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span>]  <span class="comment">% 建立一个行向量</span></span><br><span class="line">C = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]  <span class="comment">% 使用逗号分割建立一个行向量</span></span><br><span class="line">D = [<span class="number">1</span>;<span class="number">2</span>;<span class="number">3</span>;<span class="number">4</span>;<span class="number">5</span>]  <span class="comment">% 使用分号分割建立一个列向量</span></span><br><span class="line">E = C'  <span class="comment">% 对向量C进行转置</span></span><br></pre></td></tr></table></figure>
+<p>对一维数组进行操作</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 数组的操作</span></span><br><span class="line">A = [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span>]</span><br><span class="line">b1 = A(<span class="number">3</span>)  <span class="comment">% 数组的第3个元素</span></span><br><span class="line">b2 = A(<span class="number">2</span>:<span class="number">4</span>)  <span class="comment">% 数组的第2到4个元素</span></span><br><span class="line">b3 = A(<span class="number">3</span>:<span class="keyword">end</span>)  <span class="comment">% 数组的第3个到最后一个元素</span></span><br><span class="line">b4 = A(<span class="number">3</span>:<span class="number">-1</span>:<span class="number">1</span>)  <span class="comment">% 数组的第3个，第2个，第1个元素</span></span><br><span class="line">b5 = A(<span class="keyword">end</span>:<span class="number">-1</span>:<span class="number">1</span>)  <span class="comment">% 数组元素反序输出</span></span><br><span class="line">b6 = A([<span class="number">2</span>,<span class="number">4</span>])  <span class="comment">% 数组的第2个和第4个元素</span></span><br></pre></td></tr></table></figure>
+<p>还可以使用冒号<code>:</code>建立一维数组</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 使用冒号建立数组</span></span><br><span class="line">A = <span class="number">2</span>:<span class="number">6</span>  <span class="comment">% 从2到6的一维数组，递增值为1</span></span><br><span class="line">B = <span class="number">2.5</span>:<span class="number">2</span>:<span class="number">10.9</span>  <span class="comment">% 从2.5开始，每次递增2，不超过10.9</span></span><br><span class="line">C = <span class="number">2.3</span>:<span class="number">2</span>:<span class="number">9.9</span>  <span class="comment">% 从2.3开始，每次递增2，不超过9.9</span></span><br><span class="line">D = <span class="number">8</span>:<span class="number">-2</span>:<span class="number">1</span>  <span class="comment">% 从8开始，每次递减2，不小于1</span></span><br><span class="line">E = <span class="number">2</span>:<span class="number">-2</span>:<span class="number">6</span>  <span class="comment">% 将会是空数组</span></span><br></pre></td></tr></table></figure>
+<p>建立二维数组，行与行之间使用分号进行分割</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A = [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>;<span class="number">2</span> <span class="number">3</span> <span class="number">4</span>;<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]  <span class="comment">% 建立一个3行3列的数组</span></span><br><span class="line">B = [<span class="number">1</span>:<span class="number">3</span>;<span class="number">4</span>:<span class="number">6</span>;<span class="number">7</span>:<span class="number">1</span>:<span class="number">9</span>]  <span class="comment">% 建立一个3行3列的数组</span></span><br><span class="line">C = [A B]  <span class="comment">% 横向拼接</span></span><br><span class="line">D = [A;B]  <span class="comment">% 纵向拼接</span></span><br></pre></td></tr></table></figure>
+<h3 id="u6570_u7EC4_u7684_u7B97_u672F_u8FD0_u7B97"><a href="#u6570_u7EC4_u7684_u7B97_u672F_u8FD0_u7B97" class="headerlink" title="数组的算术运算"></a>数组的算术运算</h3><p>数组运算是从数组的单个元素出发，针对每个元素进行的运算。在Matlab中，一维数组的基本算术运算有：<code>+(加)</code>，<code>-(减)</code>，<code>.*(乘)</code>，<code>./(左除)</code>，<code>.\(右除)</code>和<code>^(乘方)</code>等。数组的加减运算规则：如果数组A和数组B的维数相同，则可以执行加减运算，相应元素相加减。否则会提示维数不匹配。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 数组的算术运算</span></span><br><span class="line">A = <span class="number">1</span>:<span class="number">5</span></span><br><span class="line">B = [<span class="number">0</span> <span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">2</span>]</span><br><span class="line">C = A - B</span><br><span class="line">D = A + B</span><br><span class="line">E = A + <span class="number">100</span></span><br><span class="line">X = <span class="number">3</span>:<span class="number">6</span></span><br><span class="line">A - X</span><br></pre></td></tr></table></figure>
+<p>数组的乘法和除法分别用<code>.*</code>和<code>./</code>表示，两个数组进行运算的话，也需要维数相同，都是对应元素之间进行运算。左除和右除的关系为：A./B=B.\A，其中A是被除数，B是除数。</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -212,7 +253,7 @@ ga('send', 'pageview');
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -225,70 +266,145 @@ ga('send', 'pageview');
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/06/数组和矩阵分析/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/05/Matlab第一弹/" class="archive-article-date">
-  	<time datetime="2019-07-05T14:26:46.453Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-05</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/05/Matlab第一弹/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Matlab第一弹</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/05/Matlab第一弹/">Matlab第一弹</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">matlab</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">program</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/MATLAB//" class="article-tag-list-link color2">MATLAB</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u6570_u7EC4_u548C_u77E9_u9635_u5206_u6790"><span class="toc-number">1.</span> <span class="toc-text">数组和矩阵分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u6570_u7EC4_u53CA_u5176_u51FD_u6570"><span class="toc-number">1.1.</span> <span class="toc-text">数组及其函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u6570_u7EC4_u7684_u5EFA_u7ACB_u548C_u64CD_u4F5C"><span class="toc-number">1.1.1.</span> <span class="toc-text">数组的建立和操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u6570_u7EC4_u7684_u7B97_u672F_u8FD0_u7B97"><span class="toc-number">1.1.2.</span> <span class="toc-text">数组的算术运算</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "qFcxhiJ5RFPqGPYrVIciTIFv-gzGzoHsz",
+            app_key: "0XDRMoXHEHHDdWFMPNYqAHS2",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
+</script>
+    </section>
   
-    </div></section>
   
 
-    
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -317,9 +433,9 @@ ga('send', 'pageview');
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
